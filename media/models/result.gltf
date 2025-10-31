@@ -1,0 +1,1883 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.2.cf7d3637)"
+    },
+    "extensionsUsed": [
+        "KHR_materials_volume",
+        "FB_ngon_encoding"
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 171426,
+            "type": "VEC3",
+            "max": [
+                1.455140471458435,
+                23.486116409301759,
+                2.903153657913208
+            ],
+            "min": [
+                -1.3830307722091675,
+                14.836165428161621,
+                -2.4556305408477785
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 171426,
+            "type": "VEC3",
+            "max": [
+                0.9996652603149414,
+                0.9998282790184021,
+                0.9999791383743286
+            ],
+            "min": [
+                -0.9995971918106079,
+                -0.9999438524246216,
+                -0.9999547600746155
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 171426,
+            "type": "SCALAR",
+            "max": [
+                171425
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 12288,
+            "type": "VEC3",
+            "max": [
+                1.9500000476837159,
+                16.950000762939454,
+                0.6000000238418579
+            ],
+            "min": [
+                -1.9500000476837159,
+                13.050000190734864,
+                -0.6000000238418579
+            ]
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 12288,
+            "type": "VEC3",
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 12288,
+            "type": "VEC2",
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "bufferView": 6,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 12288,
+            "type": "SCALAR",
+            "max": [
+                12287
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 7,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 10128,
+            "type": "VEC3",
+            "max": [
+                11.57682991027832,
+                10.992902755737305,
+                2.645906448364258
+            ],
+            "min": [
+                4.2059783935546879,
+                6.394826412200928,
+                1.3038328886032105
+            ]
+        },
+        {
+            "bufferView": 8,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 10128,
+            "type": "VEC3",
+            "max": [
+                0.982177197933197,
+                0.9993108510971069,
+                0.9998899102210999
+            ],
+            "min": [
+                -0.9705008268356323,
+                -0.9999839663505554,
+                -0.999952495098114
+            ]
+        },
+        {
+            "bufferView": 9,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 10128,
+            "type": "SCALAR",
+            "max": [
+                10127
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 10,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 20862,
+            "type": "VEC3",
+            "max": [
+                12.429347038269043,
+                13.369099617004395,
+                2.0510966777801515
+            ],
+            "min": [
+                1.417752981185913,
+                3.897625207901001,
+                0.9987655878067017
+            ]
+        },
+        {
+            "bufferView": 11,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 20862,
+            "type": "VEC3",
+            "max": [
+                0.9993840456008911,
+                0.9991222620010376,
+                1.0
+            ],
+            "min": [
+                -0.9989238381385803,
+                -0.9976862668991089,
+                -0.9999999403953552
+            ]
+        },
+        {
+            "bufferView": 12,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 20862,
+            "type": "SCALAR",
+            "max": [
+                20861
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 13,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 6420,
+            "type": "VEC3",
+            "max": [
+                2.129059314727783,
+                2.1007871627807619,
+                1.244612216949463
+            ],
+            "min": [
+                0.7651510834693909,
+                -6.142570972442627,
+                -0.36677244305610659
+            ]
+        },
+        {
+            "bufferView": 14,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 6420,
+            "type": "VEC3",
+            "max": [
+                0.9990983009338379,
+                0.9909346103668213,
+                0.9998907446861267
+            ],
+            "min": [
+                -0.9993089437484741,
+                -0.9869322180747986,
+                -0.9997574090957642
+            ]
+        },
+        {
+            "bufferView": 15,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 6420,
+            "type": "SCALAR",
+            "max": [
+                6419
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 16,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 6420,
+            "type": "VEC3",
+            "max": [
+                2.1994056701660158,
+                -0.9387416839599609,
+                2.677260160446167
+            ],
+            "min": [
+                1.4498531818389893,
+                -5.854689598083496,
+                1.589564561843872
+            ]
+        },
+        {
+            "bufferView": 17,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 6420,
+            "type": "VEC3",
+            "max": [
+                0.9997844696044922,
+                0.9857971668243408,
+                0.9997379183769226
+            ],
+            "min": [
+                -0.9996991753578186,
+                -0.9999997615814209,
+                -0.9998785853385925
+            ]
+        },
+        {
+            "bufferView": 18,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 6420,
+            "type": "SCALAR",
+            "max": [
+                6419
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 19,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 3276,
+            "type": "VEC3",
+            "max": [
+                1.8431963920593262,
+                10.462519645690918,
+                1.8128830194473267
+            ],
+            "min": [
+                -3.7549898624420168,
+                4.863175392150879,
+                1.3128138780593873
+            ]
+        },
+        {
+            "bufferView": 20,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 3276,
+            "type": "VEC3",
+            "max": [
+                0.9994320273399353,
+                0.9999507665634155,
+                0.9998828768730164
+            ],
+            "min": [
+                -0.9994415640830994,
+                -0.999962568283081,
+                -0.999983549118042
+            ]
+        },
+        {
+            "bufferView": 21,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 3276,
+            "type": "SCALAR",
+            "max": [
+                3275
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 22,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 3090,
+            "type": "VEC3",
+            "max": [
+                5.3732523918151859,
+                2.315822124481201,
+                2.2412967681884767
+            ],
+            "min": [
+                -0.7677310109138489,
+                0.35978370904922488,
+                1.3397785425186158
+            ]
+        },
+        {
+            "bufferView": 23,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 3090,
+            "type": "VEC3",
+            "max": [
+                0.9969245791435242,
+                0.9998928308486939,
+                0.9999366402626038
+            ],
+            "min": [
+                -0.9905034899711609,
+                -0.9857702851295471,
+                -0.9992659687995911
+            ]
+        },
+        {
+            "bufferView": 24,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 3090,
+            "type": "SCALAR",
+            "max": [
+                3089
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 25,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 15120,
+            "type": "VEC3",
+            "max": [
+                0.9662705063819885,
+                2.171173572540283,
+                2.1394693851470949
+            ],
+            "min": [
+                -5.270033836364746,
+                -3.1938259601593019,
+                -0.29762983322143557
+            ]
+        },
+        {
+            "bufferView": 26,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 15120,
+            "type": "VEC3",
+            "max": [
+                0.9999917149543762,
+                0.9999560117721558,
+                0.9999932050704956
+            ],
+            "min": [
+                -0.9992983937263489,
+                -0.998036801815033,
+                -0.999956488609314
+            ]
+        },
+        {
+            "bufferView": 27,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 15120,
+            "type": "SCALAR",
+            "max": [
+                15119
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 28,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 18972,
+            "type": "VEC3",
+            "max": [
+                -5.451451301574707,
+                0.956352949142456,
+                1.828833818435669
+            ],
+            "min": [
+                -10.807307243347168,
+                -7.841658592224121,
+                0.20878717303276063
+            ]
+        },
+        {
+            "bufferView": 29,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 18972,
+            "type": "VEC3",
+            "max": [
+                0.9990759491920471,
+                0.9964154958724976,
+                0.9999572038650513
+            ],
+            "min": [
+                -0.999372124671936,
+                -0.9991997480392456,
+                -0.9999842047691345
+            ]
+        },
+        {
+            "bufferView": 30,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 18972,
+            "type": "SCALAR",
+            "max": [
+                18971
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 31,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 68418,
+            "type": "VEC3",
+            "max": [
+                9.175895690917969,
+                7.729320526123047,
+                2.6162784099578859
+            ],
+            "min": [
+                -8.045038223266602,
+                -13.395638465881348,
+                -0.5363042950630188
+            ]
+        },
+        {
+            "bufferView": 32,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 68418,
+            "type": "VEC3",
+            "max": [
+                0.9999299049377441,
+                0.9983365535736084,
+                0.9999904632568359
+            ],
+            "min": [
+                -0.9998031258583069,
+                -0.9997215270996094,
+                -0.9999905228614807
+            ]
+        },
+        {
+            "bufferView": 33,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 68418,
+            "type": "SCALAR",
+            "max": [
+                68417
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 34,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 9240,
+            "type": "VEC3",
+            "max": [
+                9.621255874633789,
+                14.268890380859375,
+                2.918771266937256
+            ],
+            "min": [
+                -10.064187049865723,
+                -11.033909797668457,
+                0.8194835186004639
+            ]
+        },
+        {
+            "bufferView": 35,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 9240,
+            "type": "VEC3",
+            "max": [
+                0.9532114267349243,
+                0.9993940591812134,
+                0.9996586441993713
+            ],
+            "min": [
+                -0.9992808699607849,
+                -0.9298351407051086,
+                -0.9998138546943665
+            ]
+        },
+        {
+            "bufferView": 36,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 9240,
+            "type": "SCALAR",
+            "max": [
+                9239
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 37,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 31626,
+            "type": "VEC3",
+            "max": [
+                0.37314391136169436,
+                7.065266132354736,
+                1.7780990600585938
+            ],
+            "min": [
+                -11.752914428710938,
+                -2.8844573497772219,
+                -0.4388618469238281
+            ]
+        },
+        {
+            "bufferView": 38,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 31626,
+            "type": "VEC3",
+            "max": [
+                0.9984555244445801,
+                0.9995486736297607,
+                0.999983549118042
+            ],
+            "min": [
+                -0.9993894696235657,
+                -0.9997539520263672,
+                -0.999975860118866
+            ]
+        },
+        {
+            "bufferView": 39,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 31626,
+            "type": "SCALAR",
+            "max": [
+                31625
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 40,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 77826,
+            "type": "VEC3",
+            "max": [
+                3.3315470218658449,
+                10.691385269165039,
+                3.1268765926361086
+            ],
+            "min": [
+                -7.686976909637451,
+                -5.699651718139648,
+                -0.5477581024169922
+            ]
+        },
+        {
+            "bufferView": 41,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 77826,
+            "type": "VEC3",
+            "max": [
+                0.9998217821121216,
+                0.9998127222061157,
+                0.9999924898147583
+            ],
+            "min": [
+                -0.9999083876609802,
+                -0.999885082244873,
+                -0.9999862909317017
+            ]
+        },
+        {
+            "bufferView": 42,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 77826,
+            "type": "SCALAR",
+            "max": [
+                77825
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 43,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 27144,
+            "type": "VEC3",
+            "max": [
+                3.1799204349517824,
+                -6.0049238204956059,
+                3.413536787033081
+            ],
+            "min": [
+                -5.6597442626953129,
+                -13.192948341369629,
+                0.3318382203578949
+            ]
+        },
+        {
+            "bufferView": 44,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 27144,
+            "type": "VEC3",
+            "max": [
+                0.9989773035049439,
+                0.9957097768783569,
+                0.9997044801712036
+            ],
+            "min": [
+                -0.9506850242614746,
+                -0.9997771382331848,
+                -0.999836266040802
+            ]
+        },
+        {
+            "bufferView": 45,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 27144,
+            "type": "SCALAR",
+            "max": [
+                27143
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 46,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 24300,
+            "type": "VEC3",
+            "max": [
+                3.559460163116455,
+                -6.012488842010498,
+                1.6326942443847657
+            ],
+            "min": [
+                -5.856050491333008,
+                -13.233774185180664,
+                -0.6888927817344666
+            ]
+        },
+        {
+            "bufferView": 47,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 24300,
+            "type": "VEC3",
+            "max": [
+                0.9959387183189392,
+                0.9946758151054382,
+                0.9999827146530151
+            ],
+            "min": [
+                -0.9536722302436829,
+                -0.9999276995658875,
+                -0.9999992251396179
+            ]
+        },
+        {
+            "bufferView": 48,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 24300,
+            "type": "SCALAR",
+            "max": [
+                24299
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 49,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 19542,
+            "type": "VEC3",
+            "max": [
+                11.431131362915039,
+                -4.643568992614746,
+                2.4893836975097658
+            ],
+            "min": [
+                3.8101484775543215,
+                -10.913558006286621,
+                0.52618008852005
+            ]
+        },
+        {
+            "bufferView": 50,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 19542,
+            "type": "VEC3",
+            "max": [
+                0.9999808669090271,
+                0.9999464750289917,
+                0.9998666048049927
+            ],
+            "min": [
+                -0.9998858571052551,
+                -0.9995875358581543,
+                -0.99997878074646
+            ]
+        },
+        {
+            "bufferView": 51,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 19542,
+            "type": "SCALAR",
+            "max": [
+                19541
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 52,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 60564,
+            "type": "VEC3",
+            "max": [
+                7.489715099334717,
+                -7.087497234344482,
+                2.233025550842285
+            ],
+            "min": [
+                -12.106403350830079,
+                -13.765931129455567,
+                -2.130483627319336
+            ]
+        },
+        {
+            "bufferView": 53,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 60564,
+            "type": "VEC3",
+            "max": [
+                0.9995958805084229,
+                0.9998983144760132,
+                0.9998749494552612
+            ],
+            "min": [
+                -0.9999775886535645,
+                -0.9999057650566101,
+                -0.9999240636825562
+            ]
+        },
+        {
+            "bufferView": 54,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 60564,
+            "type": "SCALAR",
+            "max": [
+                60563
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 55,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 240,
+            "type": "VEC3",
+            "max": [
+                5.885293006896973,
+                13.452259063720704,
+                0.0
+            ],
+            "min": [
+                -5.88529634475708,
+                10.699999809265137,
+                -1.7999999523162842
+            ]
+        },
+        {
+            "bufferView": 56,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 240,
+            "type": "VEC3",
+            "max": [
+                0.7701318264007568,
+                0.9999418258666992,
+                1.0
+            ],
+            "min": [
+                -0.7701317667961121,
+                -1.0,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 57,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 240,
+            "type": "SCALAR",
+            "max": [
+                239
+            ],
+            "min": [
+                0
+            ]
+        },
+        {
+            "bufferView": 58,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 35088,
+            "type": "VEC3",
+            "max": [
+                12.699220657348633,
+                13.401993751525879,
+                1.0
+            ],
+            "min": [
+                -12.952731132507325,
+                -15.569367408752442,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 59,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 35088,
+            "type": "VEC3",
+            "max": [
+                0.9999997615814209,
+                1.0,
+                1.0
+            ],
+            "min": [
+                -0.9999997019767761,
+                -0.9999999403953552,
+                -1.0
+            ]
+        },
+        {
+            "bufferView": 60,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 35088,
+            "type": "SCALAR",
+            "max": [
+                35087
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 17514024,
+            "uri": "result.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 2057112,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 2057112,
+            "byteLength": 2057112,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 4114224,
+            "byteLength": 685704,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 4799928,
+            "byteLength": 147456,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 4947384,
+            "byteLength": 147456,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 5094840,
+            "byteLength": 98304,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 5193144,
+            "byteLength": 49152,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 5242296,
+            "byteLength": 121536,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 5363832,
+            "byteLength": 121536,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 5485368,
+            "byteLength": 40512,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 5525880,
+            "byteLength": 250344,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 5776224,
+            "byteLength": 250344,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6026568,
+            "byteLength": 83448,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6110016,
+            "byteLength": 77040,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6187056,
+            "byteLength": 77040,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6264096,
+            "byteLength": 25680,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6289776,
+            "byteLength": 77040,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6366816,
+            "byteLength": 77040,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6443856,
+            "byteLength": 25680,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6469536,
+            "byteLength": 39312,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6508848,
+            "byteLength": 39312,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6548160,
+            "byteLength": 13104,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6561264,
+            "byteLength": 37080,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6598344,
+            "byteLength": 37080,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6635424,
+            "byteLength": 12360,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6647784,
+            "byteLength": 181440,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 6829224,
+            "byteLength": 181440,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 7010664,
+            "byteLength": 60480,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 7071144,
+            "byteLength": 227664,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 7298808,
+            "byteLength": 227664,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 7526472,
+            "byteLength": 75888,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 7602360,
+            "byteLength": 821016,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 8423376,
+            "byteLength": 821016,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 9244392,
+            "byteLength": 273672,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 9518064,
+            "byteLength": 110880,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 9628944,
+            "byteLength": 110880,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 9739824,
+            "byteLength": 36960,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 9776784,
+            "byteLength": 379512,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 10156296,
+            "byteLength": 379512,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 10535808,
+            "byteLength": 126504,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 10662312,
+            "byteLength": 933912,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 11596224,
+            "byteLength": 933912,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 12530136,
+            "byteLength": 311304,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 12841440,
+            "byteLength": 325728,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 13167168,
+            "byteLength": 325728,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 13492896,
+            "byteLength": 108576,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 13601472,
+            "byteLength": 291600,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 13893072,
+            "byteLength": 291600,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 14184672,
+            "byteLength": 97200,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 14281872,
+            "byteLength": 234504,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 14516376,
+            "byteLength": 234504,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 14750880,
+            "byteLength": 78168,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 14829048,
+            "byteLength": 726768,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 15555816,
+            "byteLength": 726768,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 16282584,
+            "byteLength": 242256,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 16524840,
+            "byteLength": 2880,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 16527720,
+            "byteLength": 2880,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 16530600,
+            "byteLength": 960,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 16531560,
+            "byteLength": 421056,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 16952616,
+            "byteLength": 421056,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 17373672,
+            "byteLength": 140352,
+            "target": 34963
+        }
+    ],
+    "materials": [
+        {
+            "name": "WhiteMetal",
+            "pbrMetallicRoughness": {
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Rhinoceros Binary STL ( May 22 2017 )\r\n                                       \r\n",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 2,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Object_1",
+            "primitives": [
+                {
+                    "extensions": {
+                        "FB_ngon_encoding": {}
+                    },
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 6,
+                    "attributes": {
+                        "POSITION": 3,
+                        "NORMAL": 4,
+                        "TEXCOORD_0": 5
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 9,
+                    "attributes": {
+                        "POSITION": 7,
+                        "NORMAL": 8
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_2",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 12,
+                    "attributes": {
+                        "POSITION": 10,
+                        "NORMAL": 11
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_3",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 15,
+                    "attributes": {
+                        "POSITION": 13,
+                        "NORMAL": 14
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_4",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 18,
+                    "attributes": {
+                        "POSITION": 16,
+                        "NORMAL": 17
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_5",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 21,
+                    "attributes": {
+                        "POSITION": 19,
+                        "NORMAL": 20
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_6",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 24,
+                    "attributes": {
+                        "POSITION": 22,
+                        "NORMAL": 23
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_7",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 27,
+                    "attributes": {
+                        "POSITION": 25,
+                        "NORMAL": 26
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_8",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 30,
+                    "attributes": {
+                        "POSITION": 28,
+                        "NORMAL": 29
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_9",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 33,
+                    "attributes": {
+                        "POSITION": 31,
+                        "NORMAL": 32
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_10",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 36,
+                    "attributes": {
+                        "POSITION": 34,
+                        "NORMAL": 35
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_11",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 39,
+                    "attributes": {
+                        "POSITION": 37,
+                        "NORMAL": 38
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_12",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 42,
+                    "attributes": {
+                        "POSITION": 40,
+                        "NORMAL": 41
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_13",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 45,
+                    "attributes": {
+                        "POSITION": 43,
+                        "NORMAL": 44
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_14",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 48,
+                    "attributes": {
+                        "POSITION": 46,
+                        "NORMAL": 47
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_15",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 51,
+                    "attributes": {
+                        "POSITION": 49,
+                        "NORMAL": 50
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_16",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 54,
+                    "attributes": {
+                        "POSITION": 52,
+                        "NORMAL": 53
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_17",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 57,
+                    "attributes": {
+                        "POSITION": 55,
+                        "NORMAL": 56
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_18",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 60,
+                    "attributes": {
+                        "POSITION": 58,
+                        "NORMAL": 59
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "Metal 01",
+            "children": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+            ],
+            "extras": {
+                "UserProperties": "",
+                "IsNull": true,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( May 22 2017 )\r\n                                       \r\n",
+            "mesh": 0,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Object_1",
+            "mesh": 1,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n",
+            "mesh": 2,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_2",
+            "mesh": 3,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_3",
+            "mesh": 4,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_4",
+            "mesh": 5,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_5",
+            "mesh": 6,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_6",
+            "mesh": 7,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_7",
+            "mesh": 8,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_8",
+            "mesh": 9,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_9",
+            "mesh": 10,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_10",
+            "mesh": 11,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_11",
+            "mesh": 12,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_12",
+            "mesh": 13,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_13",
+            "mesh": 14,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_14",
+            "mesh": 15,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_15",
+            "mesh": 16,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_16",
+            "mesh": 17,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_17",
+            "mesh": 18,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        },
+        {
+            "name": "Rhinoceros Binary STL ( Jun  9 2014 )\r\n                                       \r\n_18",
+            "mesh": 19,
+            "extras": {
+                "UserProperties": "",
+                "IsNull": false,
+                "DefaultAttributeIndex": 0,
+                "ScalingMax": null
+            }
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0
+}
