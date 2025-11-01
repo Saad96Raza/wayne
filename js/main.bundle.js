@@ -103335,7 +103335,7 @@ var App = /*#__PURE__*/ function() {
                 envMap.mapping = three__WEBPACK_IMPORTED_MODULE_6__.EquirectangularReflectionMapping;
                 this.material = new three__WEBPACK_IMPORTED_MODULE_6__.MeshPhysicalMaterial({
                     metalness: 1.0,
-                    roughness: 0.4,
+                    roughness: 0.3,
                     clearcoat: 1.0,
                     clearcoatRoughness: 0.05,
                     envMap: envMap
