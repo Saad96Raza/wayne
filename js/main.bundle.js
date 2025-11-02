@@ -103241,10 +103241,10 @@ __webpack_require__.r(__webpack_exports__);
 /* ESM import */var _contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact */ "./src/apps/contact/index.js");
 /* ESM import */var _barba_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @barba/core */ "./node_modules/@barba/core/dist/barba.umd.js");
 /* ESM import */var _barba_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_barba_core__WEBPACK_IMPORTED_MODULE_2__);
-/* ESM import */var gsap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* ESM import */var three__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.core.js");
-/* ESM import */var three__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* ESM import */var three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! three/examples/jsm/loaders/GLTFLoader */ "./node_modules/three/examples/jsm/loaders/GLTFLoader.js");
+/* ESM import */var gsap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* ESM import */var three__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.core.js");
+/* ESM import */var three__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+/* ESM import */var three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! three/examples/jsm/loaders/GLTFLoader */ "./node_modules/three/examples/jsm/loaders/GLTFLoader.js");
 /* ESM import */var three_examples_jsm_controls_OrbitControls_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! three/examples/jsm/controls/OrbitControls.js */ "./node_modules/three/examples/jsm/controls/OrbitControls.js");
 /* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
 /* ESM import */var _media_models_result_gltf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../media/models/result.gltf */ "./src/media/models/result.gltf");
@@ -103291,7 +103291,7 @@ var App = /*#__PURE__*/ function() {
             width: window.innerWidth,
             height: window.innerHeight
         };
-        console.log();
+        this.createPreloader();
         this.createCamera();
         this.createScene();
         this.createGeometry();
@@ -103308,32 +103308,51 @@ var App = /*#__PURE__*/ function() {
     }
     _create_class(App, [
         {
+            key: "createPreloader",
+            value: function createPreloader() {
+                this.preloader = gsap__WEBPACK_IMPORTED_MODULE_6__["default"].timeline().to($('.slide svg').get(), {
+                    scaleY: 1,
+                    duration: 2,
+                    ease: "none"
+                }).to($('.slide svg').get(), {
+                    opacity: 0,
+                    duration: 1,
+                    ease: "none"
+                }).to($('.slide').get(), {
+                    height: 0,
+                    duration: 2,
+                    ease: "expo.out",
+                    stagger: 0.1
+                });
+            }
+        },
+        {
             key: "createCamera",
             value: function createCamera() {
-                this.camera = new three__WEBPACK_IMPORTED_MODULE_6__.PerspectiveCamera(70, this.screen.width / this.screen.height, 0.01, 10);
+                this.camera = new three__WEBPACK_IMPORTED_MODULE_7__.PerspectiveCamera(70, this.screen.width / this.screen.height, 0.01, 10);
                 this.camera.position.z = 1;
             }
         },
         {
             key: "createScene",
             value: function createScene() {
-                this.scene = new three__WEBPACK_IMPORTED_MODULE_6__.Scene();
+                this.scene = new three__WEBPACK_IMPORTED_MODULE_7__.Scene();
             }
         },
         {
             key: "createGeometry",
             value: function createGeometry() {
-                this.geometry = new three__WEBPACK_IMPORTED_MODULE_6__.BoxGeometry(0.5, 0.5, 0.5);
+                this.geometry = new three__WEBPACK_IMPORTED_MODULE_7__.BoxGeometry(0.5, 0.5, 0.5);
             }
         },
         {
             key: "createMaterial",
             value: function createMaterial() {
-                var textureLoader = new three__WEBPACK_IMPORTED_MODULE_6__.TextureLoader();
+                var textureLoader = new three__WEBPACK_IMPORTED_MODULE_7__.TextureLoader();
                 var matcapTexture = textureLoader.load(_media_matcap_5_png__WEBPACK_IMPORTED_MODULE_5__);
                 var envMap = textureLoader.load(matcapTexture);
-                envMap.mapping = three__WEBPACK_IMPORTED_MODULE_6__.EquirectangularReflectionMapping;
-                this.material = new three__WEBPACK_IMPORTED_MODULE_6__.MeshPhysicalMaterial({
+                envMap.mapping = three__WEBPACK_IMPORTED_MODULE_7__.EquirectangularReflectionMapping;
+                this.material = new three__WEBPACK_IMPORTED_MODULE_7__.MeshPhysicalMaterial({
                     metalness: 1.0,
                     roughness: 0.3,
                     clearcoat: 1.0,
@@ -103345,20 +103364,20 @@ var App = /*#__PURE__*/ function() {
         {
             key: "createMesh",
             value: function createMesh() {
-                this.mesh = new three__WEBPACK_IMPORTED_MODULE_6__.Mesh(this.geometry, this.material);
+                this.mesh = new three__WEBPACK_IMPORTED_MODULE_7__.Mesh(this.geometry, this.material);
             // this.scene.add( this.mesh );
             }
         },
         {
             key: "createLights",
             value: function createLights() {
-                var ambientLight = new three__WEBPACK_IMPORTED_MODULE_6__.AmbientLight(0xffffff, 1.5);
+                var ambientLight = new three__WEBPACK_IMPORTED_MODULE_7__.AmbientLight(0xffffff, 1.5);
                 this.scene.add(ambientLight);
-                var directionalLight = new three__WEBPACK_IMPORTED_MODULE_6__.DirectionalLight(0xffffff, 1.5);
+                var directionalLight = new three__WEBPACK_IMPORTED_MODULE_7__.DirectionalLight(0xffffff, 1.5);
                 directionalLight.position.set(5, 10, 7);
                 directionalLight.castShadow = true;
                 this.scene.add(directionalLight);
-                var pointLight = new three__WEBPACK_IMPORTED_MODULE_6__.PointLight(0xffffff, 1);
+                var pointLight = new three__WEBPACK_IMPORTED_MODULE_7__.PointLight(0xffffff, 1);
                 pointLight.position.set(-5, 5, -5);
                 this.scene.add(pointLight);
             }
@@ -103366,7 +103385,7 @@ var App = /*#__PURE__*/ function() {
         {
             key: "createRenderer",
             value: function createRenderer() {
-                this.renderer = new three__WEBPACK_IMPORTED_MODULE_7__.WebGLRenderer({
+                this.renderer = new three__WEBPACK_IMPORTED_MODULE_8__.WebGLRenderer({
                     antialias: true,
                     alpha: true
                 });
@@ -103388,7 +103407,7 @@ var App = /*#__PURE__*/ function() {
             key: "createModal",
             value: function createModal() {
                 var _this = this;
-                var loader = new three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_8__.GLTFLoader();
+                var loader = new three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_9__.GLTFLoader();
                 loader.load(_media_models_result_gltf__WEBPACK_IMPORTED_MODULE_4__, function(gltf) {
                     gltf.scene.traverse(function(child) {
                         if (child.isMesh) {
@@ -103396,7 +103415,7 @@ var App = /*#__PURE__*/ function() {
                             child.castShadow = true;
                             child.receiveShadow = true;
                             child.scale.set(0.030, 0.030, 0.030);
-                            gsap__WEBPACK_IMPORTED_MODULE_9__["default"].to(child.rotation, {
+                            gsap__WEBPACK_IMPORTED_MODULE_6__["default"].to(child.rotation, {
                                 y: 360,
                                 repeat: -1,
                                 duration: 600,
@@ -103423,7 +103442,7 @@ var App = /*#__PURE__*/ function() {
             key: "createAjaxNavigation",
             value: function createAjaxNavigation() {
                 var easeIn = function(container, done) {
-                    return gsap__WEBPACK_IMPORTED_MODULE_9__["default"].to(container, {
+                    return gsap__WEBPACK_IMPORTED_MODULE_6__["default"].to(container, {
                         autoAlpha: 0,
                         duration: 1,
                         ease: 'none',
@@ -103433,7 +103452,7 @@ var App = /*#__PURE__*/ function() {
                     });
                 };
                 var easeOut = function(container) {
-                    return gsap__WEBPACK_IMPORTED_MODULE_9__["default"].from(container, {
+                    return gsap__WEBPACK_IMPORTED_MODULE_6__["default"].from(container, {
                         autoAlpha: 0,
                         duration: 1,
                         ease: 'none'
