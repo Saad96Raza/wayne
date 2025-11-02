@@ -103494,6 +103494,7 @@ var App = /*#__PURE__*/ function() {
             key: "addEventListeners",
             value: function addEventListeners() {
                 $(window).on("resize", this.onResize.bind(this));
+                $(window).on("load", this.createPreloader.bind(this));
             }
         },
         {
