@@ -105311,9 +105311,9 @@ var App = /*#__PURE__*/ function() {
                 loader.load(_media_models_2_glb__WEBPACK_IMPORTED_MODULE_6__, function(gltf) {
                     gltf.scene.traverse(function(child) {
                         if (child.isMesh) {
-                            child.material = _this.material; // Apply matcap
-                            child.material.transparent = true; // ✅ allows fading in
-                            child.material.opacity = 0; // ✅ start invisible
+                            child.material = _this.material;
+                            child.material.transparent = true;
+                            child.material.opacity = 0;
                             child.castShadow = true;
                             child.receiveShadow = true;
                             child.scale.set(0.7, 0.7, 0.7);
@@ -105321,10 +105321,17 @@ var App = /*#__PURE__*/ function() {
                             if (child.material) {
                                 child.material.needsUpdate = true;
                             }
+                            var tl = gsap__WEBPACK_IMPORTED_MODULE_8__["default"].timeline();
                             gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(child.material, {
                                 opacity: 1,
-                                duration: 3,
+                                duration: 6,
                                 ease: 'none'
+                            });
+                            tl.add();
+                            gsap__WEBPACK_IMPORTED_MODULE_8__["default"].from(child.position, {
+                                y: 5,
+                                duration: 5,
+                                ease: 'expo.out'
                             });
                             gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(child.rotation, {
                                 y: 360,
@@ -105335,6 +105342,10 @@ var App = /*#__PURE__*/ function() {
                         }
                     });
                     _this.scene.add(gltf.scene);
+                }, function(xhr) {
+                    if ((xhr.loaded / xhr.total * 100).toFixed(0) + '%' === '100%') {
+                        _this.createPreloader();
+                    }
                 });
             }
         },
@@ -105394,7 +105405,6 @@ var App = /*#__PURE__*/ function() {
             key: "addEventListeners",
             value: function addEventListeners() {
                 $(window).on("resize", this.onResize.bind(this));
-                $(window).on("load", this.createPreloader.bind(this));
             }
         },
         {

@@ -4691,9 +4691,6 @@ video {
   border-start-end-radius: var(--radius-selector);
   border-end-end-radius: var(--radius-selector);
 }
-.invisible{
-  visibility: hidden;
-}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
