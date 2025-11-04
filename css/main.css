@@ -446,6 +446,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-family: "playfair";
+  background: #000000;
 }
 
 img,
@@ -1314,7 +1315,7 @@ html.has-scroll-dragging {
 
 canvas {
   inset: 0;
-  position: fixed;
+  position: absolute;
   z-index: -1;
 }
 
@@ -1419,12 +1420,17 @@ footer .text-link {
 /* ======== */
 /* Home CSS */
 /* ======== */
-.section.home-section-1 h1 {
+.section.home-section-1 {
+  position: relative;
+  height: 100vh;
+}
+.section.home-section-3 h1 {
   color: #f3ebec;
 }
-.section.home-section-1 .fade {
+.section.home-section-3 .fade {
   opacity: 0;
 }
+
 /* ======== */
 /* CONTACT  CSS */
 /* ======== */
@@ -4685,6 +4691,9 @@ video {
   border-start-end-radius: var(--radius-selector);
   border-end-end-radius: var(--radius-selector);
 }
+.invisible{
+  visibility: hidden;
+}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -4737,10 +4746,6 @@ video {
 .overflow-hidden{
   overflow: hidden;
 }
-.py-\[12rem\]{
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-}
 .py-\[2rem\]{
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -4752,6 +4757,9 @@ video {
 .py-\[8rem\]{
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+.pb-\[12rem\]{
+  padding-bottom: 12rem;
 }
 .text-left{
   text-align: left;
