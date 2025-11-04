@@ -1,0 +1,37 @@
+
+
+/* ======== */
+/* Main CSS */
+/* ======== */
+
+
+// Abstracts
+@use "abstracts" as *;
+// Base
+@use "base" as *;
+// Components
+@use "components" as *;
+// Layouts
+@use "layouts" as *;
+// Pages
+@use "pages" as *;
+
+@import '../../src/scss/offcanvas/pure-drawer.scss';
+@import 'atropos/scss';
+
+
+
+/* ======== */
+/* Main TAILWINDCSS DECORATIVES */
+/* ======== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ======== */
+/* Main DAISYUI DECORATIVES */
+/* ======== */
+
+@plugin "daisyui";
+

@@ -1,0 +1,55 @@
+@use "sass:math";
+
+
+
+// ================================== //
+// Access nested variable maps values //
+// ================================== //
+@function ss-var($variable, $keys...) {
+    $value: $variable;
+
+    @each $key in $keys {
+        $value: map-get($value, $key);
+    }
+
+    @return $value;
+}
+// ================================= //
+// String replace used for font face //
+// ================================= //
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// ================================== //
+// Convert pixel values to rem units  //
+// ================================== //
+@function rem($pixels, $context: 16) {
+  @return math.div($pixels, $context) * 1rem;
+}
+  // ================================== //
+  // Convert hex color to RGBA with opacity //
+  // ================================== //
+  $opacityMax: 1; // Default opacity
+@function color($color, $opacity: $opacityMax) {
+    @return rgba($color, $opacity);
+}
+  
+  // ================================== //
+  // Set font size with optional line height //
+  // ================================== //
+@mixin font-size-line-height($font-size, $line-height: null) {
+    font-size: rem($font-size);
+    @if $line-height {
+      line-height: rem($line-height);
+    }
+}
+
+
+

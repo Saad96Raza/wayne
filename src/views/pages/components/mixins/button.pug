@@ -1,0 +1,10 @@
+mixin primaryButton(title)
+    button( class='flex primary-button mx-auto')
+        a(class="small-btn-cta-link small-btn-cta-link-cta -xxl")
+            span(class="small-btn-cta-border")
+            span(class="small-btn-cta-ripple")
+                span
+            span(class="small-btn-cta-title")
+                span(class="sm-btn-text" data-text=title)
+                    | #{title}
+                    //- i(class="icon-ArrowDownRight")

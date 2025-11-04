@@ -1,0 +1,32 @@
+// Abstracts
+@use '../abstracts' as *;
+
+/* Footer */
+
+
+.footer-top{
+        background: ss-var($colors,primary,'primary1');
+    .social-icons{
+        svg{
+             fill:ss-var($colors,primary,'primary3');
+             width: rem(100);
+             height: rem(100);
+             border: rem(4) solid ss-var($colors,primary,'primary3');
+             border-radius: rem(100);
+             transition: all ease 0.3;
+             &:hover{
+                border-color: ss-var($colors,neutral,'white');
+             }
+        }
+    }
+
+}
+
+footer{
+    background: ss-var($colors,primary,'primary2');
+    .text-link{
+        color: ss-var($colors,neutral,'white');
+        
+    }
+   
+}

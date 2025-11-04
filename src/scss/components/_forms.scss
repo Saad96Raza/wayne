@@ -1,0 +1,76 @@
+// Abstracts
+@use '../abstracts/' as *;
+
+/* Forms */
+
+
+
+// Set variables (change as needed)
+$height: 3.5em;
+$margin: 1em;
+$border: 1px;
+$radius: calc(#{$height} / 2);
+$borders: calc(#{$border} * 2);
+
+// Apply directly to inputs
+.form{
+  input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 $margin;
+  padding: $margin;
+  border: $border solid ss-var($colors,primary,'primary4');
+  border-radius: $radius;
+  background: ss-var($colors,primary,'primary4');
+  resize: none;
+  outline: none;
+
+  &[required] {
+    &:focus {
+      border-color: ss-var($colors,neutral,'white');
+      background: transparent;
+
+
+      + label[placeholder]::before {
+        color: ss-var($colors,neutral,'white');
+         background: ss-var($colors,primary,'primary1');
+      }
+    }
+
+    // Placeholder animation (move up on focus & valid)
+    &:focus,
+    &:valid {
+      + label[placeholder]::before {
+        transition-duration: .2s;
+        transform: translate(0, calc(#{$margin} * -1.5)) scale(.9);
+      }
+    }
+
+    // If invalid → show label "alt" text
+    &:invalid + label[placeholder][alt]::before {
+      content: attr(alt);
+    }
+
+    + label[placeholder] {
+      display: block;
+      pointer-events: none;
+      line-height: calc(#{$margin} * 1.25);
+      margin-top: calc(-#{$height} - #{$borders});
+      margin-bottom: calc((#{$height} - #{$margin}) + #{$borders});
+
+      &::before {
+        content: attr(placeholder);
+        display: inline-block;
+        margin: 0 calc(#{$margin} + #{$borders});
+        padding: 0 2px;
+        color: ss-var($colors,neutral,'white');;
+        white-space: nowrap;
+        transition: .3s ease-in-out;
+
+      }
+    }
+  }
+}
+
+}
+

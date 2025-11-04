@@ -1,0 +1,43 @@
+// Abstracts
+@use '../abstracts' as *;
+
+/* Header */
+.header{
+   .text-link {
+    color: ss-var($colors, neutral, 'white');
+    position: relative;
+    display: inline-block;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: rem(-5);
+    left: 0;
+    height: rem(2);
+    width: 100%;
+    background: ss-var($colors, neutral, 'white');
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+
+  }
+
+  &:hover::before {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

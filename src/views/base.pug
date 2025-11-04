@@ -1,0 +1,20 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title #{htmlWebpackPlugin.options.title}
+body(data-barba="wrapper")
+  div(class="smooth-scroll")             
+    div(class="preloader grid grid-cols-2")
+      div(class="slide")
+          svg
+            line(x1='0' y1='0' x2='0' y2='100%' )    
+      div(class="slide")
+          svg
+            line(x1='0' y1='0' x2='0' y2='100%')
+      include  ../../src/views/partials/header.pug
+    main(data-barba="container" data-barba-namespace=htmlWebpackPlugin.options.title)
+      block content
+    include  ../../src/views/partials/footer.pug
+

@@ -1,0 +1,45 @@
+// Abstracts
+@use '../abstracts/' as *;
+
+/* ========= */
+/* Font Face */
+/* ========= */
+
+/* Thin */
+@include font-face($font-raleway, "../fonts/raleway/Raleway-Thin-100", 100, "normal", woff2 woff ttf);
+/* Extralight */
+@include font-face($font-raleway, "../fonts/raleway/Raleway-Extralight-200", 200, "normal", woff2 woff ttf);
+/* Light */
+@include font-face($font-raleway, "../fonts/raleway/Raleway-Light-300", 300, "normal", woff2 woff ttf);
+/* Regular */
+@include font-face($font-raleway, "../fonts/raleway/Raleway-Regular-400", 400, "normal", woff2 woff ttf);
+/* Medium */
+@include font-face($font-raleway, "../fonts/raleway/Raleway-Medium-500", 500, "normal", woff2 woff ttf);
+/* Semibold */
+@include font-face($font-raleway, "../fonts/raleway/Raleway-Semibold-600", 600, "normal", woff2 woff ttf);
+/* Bold */
+@include font-face($font-raleway, "../fonts/raleway/Raleway-Bold-700", 700, "normal", woff2 woff ttf);
+/* Extrabold */
+@include font-face($font-raleway, "../fonts/raleway/Raleway-Extrabold-800", 800, "normal", woff2 woff ttf);
+/* Blackbold */
+@include font-face($font-raleway, "../fonts/raleway/Raleway-Black-900", 900, "normal", woff2 woff ttf);
+
+@include font-face('Krona One', "../fonts/krona-one/KronaOne-Regular", 900, "normal", ttf);
+
+@include font-face($font-Mclassic, "../fonts/mclassic/MCLASSICFONT-Regular", 100, "normal", woff2 woff ttf);
+
+@include font-face($font-playfair, "../fonts/playfair/playfair-display.regular", 100, "normal", ttf);
+
+@include font-face($font-aveline, "../fonts/aveline/wedding", 100, "normal", ttf);
+
+@include font-face($font-spark, "../fonts/mabdy/spark", 100, "normal", ttf);
+
+@include font-face($font-cinzel, "../fonts/cinzel/cinzel", 100, "normal", ttf);
+
+@include font-face($font-helevetica, "../fonts/helvetica-255/Helvetica", 100, "normal", ttf);
+
+@include font-face($font-balestya, "../fonts/custom/TheChairman-Regular", 100, "normal", otf);
+
+@include font-face($font-philosopher, "../fonts/custom/Philosopher-Regular", 100, "normal", ttf);
+
+

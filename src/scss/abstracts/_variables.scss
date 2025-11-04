@@ -1,0 +1,93 @@
+@use "functions" as *;
+// ======================== //
+// Prefixes for class names //
+// ======================== //
+$prefix: "ss-";
+// ========= //
+// Font name //
+// ========= //
+$font-raleway: "Raleway";
+$font-serif: "sans-serif";
+$font-icon: 'iconmoon';
+$font-playfair: 'playfair';
+$font-Mclassic: 'Mclassic';
+$font-aveline: 'Aveline';
+$font-spark: 'mabdy';
+$font-cinzel: 'cinzel';
+$font-helevetica: 'helevetica';
+$font-balestya: 'balestya';
+$font-philosopher: 'philosopher';
+
+$button-link:1.8rem;
+
+// ============ //
+// Font weights //
+// ============ //
+$font-weight: (
+    "thin": 100,
+    "extralight": 200,
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700,
+    "extrabold": 800,
+    "blackbold": 900,
+);
+// ====== //
+// Colors //
+// ====== //
+$colors: (
+    // Main colors
+    primary:
+        (
+            "primary1": #7c2529,
+            "primary2": #4d4845,
+            "primary3": #ffaa4d,
+            "primary4": #b8623a,
+        ),
+    // Secondary colors
+    secondary:
+        (
+            "lightgreen": #5fbe6e,
+            "darkblue": #2b365a,
+            "lightblue": #5fbebc,
+            "yellow": #bebe5f,
+            "red": #c94242,
+            "purple": #a35fbe,
+        ),
+    // Colors used for gradient
+    gradient: (),
+    // Grayscale/Basic colors
+    neutral:
+        (
+            "black": #000000,
+            "darkgray": #343434,
+            "gray": #c8c8c8,
+            "lightgray": #f7f7f7,
+            "white": #f3ebec,
+        )
+);
+// ========================== //
+// Device breakpoints (width) //
+// ========================== //
+$breakpoints: (
+    // Mobile
+    "320": 320px,
+    "360": 360px,
+    "375": 375px,
+    "425": 425px,
+    // Tablets
+    "768": 768px,
+    "800": 800px,
+    "900": 900px,
+    "1024": 1024px,
+    // Computers (Laptops/Desktops)
+    "1280": 1280px,
+    "1366": 1366px,
+    "1440": 1440px,
+    "1600": 1600px,
+    "1680": 1680px,
+    "1920": 1920px,
+    "2560": 2560px,
+);

@@ -1,0 +1,13 @@
+// Abstracts
+@use '../abstracts/' as *;
+
+/* Svg */
+
+.svg-line{
+    width: 100%;
+    height: rem(5);
+    line{
+        stroke: ss-var($colors,neutral,'gray');
+        stroke-width: rem(2); 
+    }
+}

@@ -1,0 +1,89 @@
+
+@use '../abstracts/' as *;
+
+
+
+
+
+  @include font-face($font-icon, "../fonts/icons/fonts/icomoon.eot?3nxk7l#iefix");
+  @include font-face($font-icon, "../fonts/icons/fonts/icomoon.ttf?3nxk7l", embedded-opentype);
+  @include font-face($font-icon, "../fonts/icons/fonts/icomoon.ttf?3nxk7l", truetype);
+  @include font-face($font-icon, "../fonts/icons/fonts/icomoon.woff?3nxk7l", woff);
+  @include font-face($font-icon, "../fonts/icons/fonts/icomoon.svg?3nxk7l#icomoon", svg);
+
+
+
+
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'iconmoon';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  $icons: (
+    arrowDown: "\e900",
+    arrowDownLeft: "\e901",
+    ArrowDownRight: "\e902",
+    arrowLeft: "\e903",
+    arrowRight: "\e904",
+    arrowUp: "\e905",
+    arrowUpLeft: "\e906",
+    basketBall: "\e907",
+    bellSimple: "\e908",
+    bookts: "\e909",
+    buildings: "\e90a",
+    calenderCheck: "\e90b",
+    camera: "\e90c",
+    careLeft: "\e90d",
+    careRight: "\e90e",
+    caretDown: "\e90f",
+    careUp: "\e910",
+    chartBar: "\e911",
+    check: "\e912",
+    clock: "\e913",
+    coffee: "\e914",
+    controller: "\e915",
+    envelopeSimple: "\e916",
+    eye: "\e917",
+    houseSimple: "\e918",
+    imageSquare: "\e919",
+    lamp: "\e91a",
+    laptop: "\e91b",
+    lightBulp: "\e91c",
+    lock: "\e91d",
+    magnifyingGlass: "\e91e",
+    menu: "\e91f",
+    moon: "\e920",
+    nonPremium: "\e921",
+    notification: "\e922",
+    nut: "\e923",
+    PencilSimple: "\e924",
+    plug: "\e925",
+    premium: "\e926",
+    signOut: "\e927",
+    sunDimp: "\e928",
+    sunHorizon: "\e929",
+    TrendDown: "\e92a",
+    trendUp: "\e92b",
+    usercircle: "\e92c",
+    userList: "\e92d"
+  );
+  
+  @each $name, $code in $icons {
+    .icon-#{$name}::before {
+      content: $code;
+      font-family: 'iconmoon';
+
+    }
+  }
+  
+
+.sm-btn-text{
+    &::before {
+        font-family: "iconmoon";
+    }
+}

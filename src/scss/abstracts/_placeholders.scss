@@ -1,0 +1,22 @@
+// Mainly to make images as a circle
+// Abstracts
+@use "variables" as *;
+@use 'functions' as *;
+
+%circle {
+    border-radius: 50%;
+}
+
+// Removing default appearance
+%no-appearance {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+%center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

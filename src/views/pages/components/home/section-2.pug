@@ -1,0 +1,21 @@
+
+include ../mixins/button.pug
+include ../mixins/text.pug
+
+section(class="section home-section-2")
+    div(class="container py-[4rem]")
+        div(class="grid grid-cols-1 md:grid-cols-2 gap-[6rem]")
+            div(class="banner overflow-hidden")
+                img(src="./media/banner/2.jpg" class="clip-reveal" data-scroll data-scroll-class="is-in-view" alt="") 
+            div(class="flex flex-col justify-center items-center  gap-[2rem]") 
+                +Title(
+                    'High-Class Hideout',
+                    'h2',
+                    'text-left'
+                )
+                p(class="text-link fade-class"  data-scroll data-scroll-class="is-in-view") The Wayne blends modern architecture with the timeless charm of heritage. Inspired by the lucky horseshoe, The Wayne offers an elevated living experience in the heart of the Crestwood, sleek, bold, and refined. Subtle textures, warm tones, and clean geometry bring its story of fortune and sophistication to life. 
+
+
+    
+
+    

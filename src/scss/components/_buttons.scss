@@ -1,0 +1,48 @@
+// Abstracts
+@use '../abstracts/' as *;
+
+/* Buttons */
+
+.call-to-action{
+    @include CTA(30, 20);   // custom padding (padding: 10px 30px)
+
+}
+
+.call-to-action-card{
+    @include CTA(60, 20);   // custom padding (padding: 10px 30px)
+}
+
+
+
+.primary-button{
+    font-family: $font-philosopher;
+    span{
+      font-size: rem(40);
+    }
+
+  @include primary-button(
+    rem(24),
+    rem(64),
+    ss-var($colors,primary,'primary2'),
+    ss-var($colors,primary,'primary3'),
+    ss-var($colors,primary,'primary1'),
+    ss-var($colors,neutral,'white'),
+    ss-var($colors,neutral,'white'),
+    ss-var($colors,neutral,'white')
+  )
+  
+   
+}
+
+.primary-button-textless{
+  @include primary-button(
+    rem(24),
+    rem(30),
+    ss-var($colors,neutral,'black'),
+    ss-var($colors,primary,'primary1'),
+    ss-var($colors,primary,'primary1'),
+    ss-var($colors,neutral,'white'),
+    ss-var($colors,neutral,'white'),
+    ss-var($colors,neutral,'white')
+  )   
+}

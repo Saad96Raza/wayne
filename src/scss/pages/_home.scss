@@ -1,0 +1,25 @@
+// Abstracts
+@use '../abstracts' as *;
+
+/* ======== */
+/* Home CSS */
+/* ======== */
+
+.section{
+    &.home-section-1{
+        position: relative;
+        height: 100vh;
+    }
+    &.home-section-3{
+        h1{
+            color: ss-var($colors,neutral,'white');
+        }
+        .fade{
+            opacity: 0;
+        }
+    }
+
+    
+}
+
+
