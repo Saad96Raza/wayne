@@ -1291,7 +1291,7 @@ html.has-scroll-dragging {
 /* ======== */
 .fade-class {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(2.5rem);
   transition: opacity 1s ease-out, transform 1s ease-out;
   transition-delay: 0.5s;
 }
@@ -1301,14 +1301,14 @@ html.has-scroll-dragging {
 }
 
 .clip-reveal {
-  clip-path: inset(0 0 100% 0);
+  clip-path: circle(0% at 50% 50%);
   opacity: 0;
   transform: scale(1.4);
-  transition: clip-path 3s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.6s ease-out;
+  transition: clip-path 6.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 6.2s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.6s ease-out;
   transition-delay: 1s;
 }
 .clip-reveal.is-in-view {
-  clip-path: inset(0 0 0 0);
+  clip-path: circle(100% at 50% 50%);
   transform: scale(1);
   opacity: 1;
 }
@@ -1395,9 +1395,6 @@ dialog.cta-quick-form-modal form {
 }
 
 /* Footer */
-.footer-top {
-  background: #7c2529;
-}
 .footer-top .social-icons svg {
   fill: #ffaa4d;
   width: 6.25rem;
@@ -1410,11 +1407,14 @@ dialog.cta-quick-form-modal form {
   border-color: #f3ebec;
 }
 
-footer {
-  background: #4d4845;
-}
 footer .text-link {
   color: #f3ebec;
+}
+
+.footer-top,
+.footer {
+  transition: background-color 2s ease;
+  background-color: transparent;
 }
 
 /* ======== */
@@ -4709,6 +4709,9 @@ video {
 }
 .w-full{
   width: 100%;
+}
+.max-w-full{
+  max-width: 100%;
 }
 .resize{
   resize: both;

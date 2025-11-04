@@ -20210,13 +20210,13 @@ var Native = /*#__PURE__*/function () {
 
 
 }),
-"./src/media/matcap/5.png": 
-/*!********************************!*\
-  !*** ./src/media/matcap/5.png ***!
-  \********************************/
+"./src/media/banner/texture.png": 
+/*!**************************************!*\
+  !*** ./src/media/banner/texture.png ***!
+  \**************************************/
 (function (module, __unused_webpack_exports, __webpack_require__) {
 "use strict";
-module.exports = __webpack_require__.p + "media/5.png";
+module.exports = __webpack_require__.p + "media/texture.png";
 
 }),
 "./src/media/models/2.glb": 
@@ -105121,7 +105121,7 @@ __webpack_require__.r(__webpack_exports__);
 /* ESM import */var atropos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! atropos */ "./node_modules/atropos/atropos.mjs");
 /* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
 /* ESM import */var _media_models_2_glb__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../media/models/2.glb */ "./src/media/models/2.glb");
-/* ESM import */var _media_matcap_5_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../media/matcap/5.png */ "./src/media/matcap/5.png");
+/* ESM import */var _media_banner_texture_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../media/banner/texture.png */ "./src/media/banner/texture.png");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 function _class_call_check(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -105191,6 +105191,16 @@ var App = /*#__PURE__*/ function() {
                     lerp: 0.050
                 });
                 this.locomotiveScroll.stop();
+                this.locomotiveScroll.on('call', function(value, way) {
+                    if (way === 'enter') {
+                        if (value === 'bg-1') {
+                            $(".footer-top").css("background-color", "#7c2529");
+                        }
+                        if (value === 'bg-2') {
+                            $(".footer").css("background-color", "#4d4845");
+                        }
+                    }
+                });
             }
         },
         {
@@ -105230,7 +105240,7 @@ var App = /*#__PURE__*/ function() {
                     shadow: false,
                     alwaysActive: true,
                     highlight: false,
-                    duration: 1000
+                    duration: 600
                 });
             }
         },
@@ -105256,10 +105266,14 @@ var App = /*#__PURE__*/ function() {
         {
             key: "createMaterial",
             value: function createMaterial() {
-                var textureLoader = new three__WEBPACK_IMPORTED_MODULE_9__.TextureLoader();
-                var matcapTexture = textureLoader.load(_media_matcap_5_png__WEBPACK_IMPORTED_MODULE_7__); // matcap must be URL string
-                this.material = new three__WEBPACK_IMPORTED_MODULE_9__.MeshMatcapMaterial({
-                    matcap: matcapTexture
+                var texture = new three__WEBPACK_IMPORTED_MODULE_9__.TextureLoader().load(_media_banner_texture_png__WEBPACK_IMPORTED_MODULE_7__, function(tex) {
+                    tex.wrapS = three__WEBPACK_IMPORTED_MODULE_9__.RepeatWrapping;
+                    tex.wrapT = three__WEBPACK_IMPORTED_MODULE_9__.RepeatWrapping;
+                });
+                this.material = new three__WEBPACK_IMPORTED_MODULE_9__.MeshStandardMaterial({
+                    map: texture,
+                    roughness: 0.2,
+                    metalness: 0.6
                 });
             }
         },
@@ -105312,27 +105326,43 @@ var App = /*#__PURE__*/ function() {
                     gltf.scene.traverse(function(child) {
                         if (child.isMesh) {
                             child.material = _this.material;
-                            child.material.transparent = true;
                             child.material.opacity = 0;
-                            child.castShadow = true;
-                            child.receiveShadow = true;
                             child.scale.set(0.7, 0.7, 0.7);
                             child.position.set(0, 0, 0);
+                            // ✅ If geometry has no UVs → generate planar UVs
+                            if (!child.geometry.attributes.uv) {
+                                child.geometry.computeBoundingBox();
+                                var bbox = child.geometry.boundingBox;
+                                var size = new three__WEBPACK_IMPORTED_MODULE_9__.Vector2();
+                                bbox.getSize(size);
+                                var positions = child.geometry.attributes.position;
+                                var uvArray = new Float32Array(positions.count * 6);
+                                for(var i = 0; i < positions.count; i++){
+                                    var x = positions.getX(i);
+                                    var y = positions.getY(i);
+                                    uvArray[i * 2] = (x - bbox.min.x) / size.x; // U
+                                    uvArray[i * 2 + 1] = (y - bbox.min.y) / size.y; // V
+                                }
+                                child.geometry.setAttribute("uv", new three__WEBPACK_IMPORTED_MODULE_9__.BufferAttribute(uvArray, 2));
+                                child.geometry.attributes.uv.needsUpdate = true;
+                            }
                             if (child.material) {
                                 child.material.needsUpdate = true;
                             }
-                            var tl = gsap__WEBPACK_IMPORTED_MODULE_8__["default"].timeline();
-                            gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(child.material, {
+                            var tl = gsap__WEBPACK_IMPORTED_MODULE_8__["default"].timeline({
+                                delay: 3
+                            });
+                            tl.add('simultaneous');
+                            tl.to(child.material, {
                                 opacity: 1,
-                                duration: 6,
+                                duration: 3,
                                 ease: 'none'
-                            });
-                            tl.add();
-                            gsap__WEBPACK_IMPORTED_MODULE_8__["default"].from(child.position, {
-                                y: 5,
-                                duration: 5,
+                            }, "simultaneous");
+                            tl.from(child.position, {
+                                y: 2,
+                                duration: 3,
                                 ease: 'expo.out'
-                            });
+                            }, "simultaneous");
                             gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(child.rotation, {
                                 y: 360,
                                 repeat: -1,
