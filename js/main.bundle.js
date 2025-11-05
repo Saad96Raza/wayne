@@ -105353,17 +105353,11 @@ var App = /*#__PURE__*/ function() {
                             var tl = gsap__WEBPACK_IMPORTED_MODULE_8__["default"].timeline({
                                 delay: 3
                             });
-                            tl.add('simultaneous');
                             tl.to(child.material, {
                                 opacity: 1,
                                 duration: 3,
                                 ease: 'none'
-                            }, "simultaneous");
-                            tl.from(child.position, {
-                                y: 2,
-                                duration: 3,
-                                ease: 'expo.out'
-                            }, "simultaneous");
+                            });
                             gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(child.rotation, {
                                 y: 360,
                                 repeat: -1,
