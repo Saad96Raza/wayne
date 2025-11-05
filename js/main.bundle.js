@@ -105269,6 +105269,7 @@ var App = /*#__PURE__*/ function() {
                 var texture = new three__WEBPACK_IMPORTED_MODULE_9__.TextureLoader().load(_media_banner_texture_png__WEBPACK_IMPORTED_MODULE_7__, function(tex) {
                     tex.wrapS = three__WEBPACK_IMPORTED_MODULE_9__.RepeatWrapping;
                     tex.wrapT = three__WEBPACK_IMPORTED_MODULE_9__.RepeatWrapping;
+                    tex.repeat.set(2, 2);
                 });
                 this.material = new three__WEBPACK_IMPORTED_MODULE_9__.MeshStandardMaterial({
                     map: texture,
