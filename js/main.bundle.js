@@ -20219,13 +20219,13 @@ var Native = /*#__PURE__*/function () {
 module.exports = __webpack_require__.p + "media/texture.png";
 
 }),
-"./src/media/models/2.glb": 
+"./src/media/models/1.glb": 
 /*!********************************!*\
-  !*** ./src/media/models/2.glb ***!
+  !*** ./src/media/models/1.glb ***!
   \********************************/
 (function (module, __unused_webpack_exports, __webpack_require__) {
 "use strict";
-module.exports = __webpack_require__.p + "media/models/2.glb";
+module.exports = __webpack_require__.p + "media/models/1.glb";
 
 }),
 "./src/apps/contact/index.js": 
@@ -105809,12 +105809,12 @@ __webpack_require__.r(__webpack_exports__);
 /* ESM import */var gsap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* ESM import */var three__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.core.js");
 /* ESM import */var three__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* ESM import */var three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! three/examples/jsm/loaders/GLTFLoader */ "./node_modules/three/examples/jsm/loaders/GLTFLoader.js");
-/* ESM import */var three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! three/examples/jsm/loaders/DRACOLoader */ "./node_modules/three/examples/jsm/loaders/DRACOLoader.js");
+/* ESM import */var three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! three/examples/jsm/loaders/GLTFLoader */ "./node_modules/three/examples/jsm/loaders/GLTFLoader.js");
+/* ESM import */var three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! three/examples/jsm/loaders/DRACOLoader */ "./node_modules/three/examples/jsm/loaders/DRACOLoader.js");
 /* ESM import */var locomotive_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! locomotive-scroll */ "./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js");
 /* ESM import */var atropos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! atropos */ "./node_modules/atropos/atropos.mjs");
 /* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
-/* ESM import */var _media_models_2_glb__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../media/models/2.glb */ "./src/media/models/2.glb");
+/* ESM import */var _media_models_1_glb__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../media/models/1.glb */ "./src/media/models/1.glb");
 /* ESM import */var _media_banner_texture_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../media/banner/texture.png */ "./src/media/banner/texture.png");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 function _class_call_check(instance, Constructor) {
@@ -106001,53 +106001,50 @@ var App = /*#__PURE__*/ function() {
             key: "createModal",
             value: function createModal() {
                 var _this = this;
-                var draco = new three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_11__.DRACOLoader();
-                draco.setDecoderPath('/js/libs/draco/');
-                var loader = new three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_12__.GLTFLoader();
-                loader.setDRACOLoader(draco);
-                loader.load(_media_models_2_glb__WEBPACK_IMPORTED_MODULE_6__, function(gltf) {
-                    gltf.scene.traverse(function(child) {
-                        if (child.isMesh) {
-                            child.material = _this.material;
-                            child.material.transparent = true;
-                            child.material.opacity = 0;
-                            child.scale.set(0.7, 0.7, 0.7);
-                            child.position.set(0, 0, 0);
-                            if (!child.geometry.attributes.uv) {
-                                child.geometry.computeBoundingBox();
-                                var bbox = child.geometry.boundingBox;
-                                var size = new three__WEBPACK_IMPORTED_MODULE_9__.Vector2();
-                                bbox.getSize(size);
-                                var positions = child.geometry.attributes.position;
-                                var uvArray = new Float32Array(positions.count * 6);
-                                for(var i = 0; i < positions.count; i++){
-                                    var x = positions.getX(i);
-                                    var y = positions.getY(i);
-                                    uvArray[i * 2] = (x - bbox.min.x) / size.x; // U
-                                    uvArray[i * 2 + 1] = (y - bbox.min.y) / size.y; // V
-                                }
-                                child.geometry.setAttribute("uv", new three__WEBPACK_IMPORTED_MODULE_9__.BufferAttribute(uvArray, 2));
-                                child.geometry.attributes.uv.needsUpdate = true;
+                var loader = new three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_11__.GLTFLoader();
+                var dracoLoader = new three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_12__.DRACOLoader();
+                dracoLoader.setDecoderPath('/draco/'); // MUST be absolute /draco/
+                dracoLoader.setDecoderConfig({
+                    type: 'js'
+                });
+                loader.setDRACOLoader(dracoLoader); // ✅ THIS IS REQUIRED
+                loader.load(_media_models_1_glb__WEBPACK_IMPORTED_MODULE_6__, function(gltf) {
+                    var model = gltf.scene;
+                    model.traverse(function(child) {
+                        if (!child.isMesh) return;
+                        // Apply your material
+                        child.material = _this.material;
+                        child.material.transparent = true;
+                        child.material.opacity = 0;
+                        child.scale.set(0.7, 0.7, 0.7);
+                        child.position.set(0, 0, 0);
+                        if (!child.geometry.attributes.uv) {
+                            child.geometry.computeBoundingBox();
+                            var bbox = child.geometry.boundingBox;
+                            var uv = new Float32Array(child.geometry.attributes.position.count * 2);
+                            for(var i = 0; i < child.geometry.attributes.position.count; i++){
+                                uv[i * 2] = (child.geometry.attributes.position.getX(i) - bbox.min.x) / (bbox.max.x - bbox.min.x);
+                                uv[i * 2 + 1] = (child.geometry.attributes.position.getY(i) - bbox.min.y) / (bbox.max.y - bbox.min.y);
                             }
-                            gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(child.material, {
-                                opacity: 1,
-                                duration: 6,
-                                ease: 'none'
-                            });
-                            gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(child.rotation, {
-                                y: 360,
-                                repeat: -1,
-                                duration: 600,
-                                ease: 'none'
-                            });
-                        }
-                        if (child.material) {
-                            child.material.needsUpdate = true;
+                            child.geometry.setAttribute("uv", new three__WEBPACK_IMPORTED_MODULE_9__.BufferAttribute(uv, 2));
                         }
                     });
-                    _this.scene.add(gltf.scene);
-                }, function(xhr) {
-                    if ((xhr.loaded / xhr.total * 100).toFixed(0) + '%' === '100%') {
+                    _this.scene.add(model);
+                    gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(_this.material, {
+                        opacity: 1,
+                        duration: 2,
+                        ease: "none"
+                    });
+                    gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(model.rotation, {
+                        y: Math.PI * 2,
+                        duration: 10,
+                        repeat: -1,
+                        ease: "none"
+                    });
+                }, // ✅ Progress callback
+                function(xhr) {
+                    var percent = (xhr.loaded / xhr.total * 100).toFixed(0);
+                    if (percent === "100") {
                         _this.createPreloader();
                     }
                 });
