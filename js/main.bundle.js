@@ -105810,7 +105810,7 @@ __webpack_require__.r(__webpack_exports__);
 /* ESM import */var three__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.core.js");
 /* ESM import */var three__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
 /* ESM import */var three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! three/examples/jsm/loaders/GLTFLoader */ "./node_modules/three/examples/jsm/loaders/GLTFLoader.js");
-/* ESM import */var three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! three/examples/jsm/loaders/DRACOLoader */ "./node_modules/three/examples/jsm/loaders/DRACOLoader.js");
+/* ESM import */var three_examples_jsm_loaders_DRACOLoader_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! three/examples/jsm/loaders/DRACOLoader.js */ "./node_modules/three/examples/jsm/loaders/DRACOLoader.js");
 /* ESM import */var locomotive_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! locomotive-scroll */ "./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js");
 /* ESM import */var atropos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! atropos */ "./node_modules/atropos/atropos.mjs");
 /* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
@@ -106002,7 +106002,7 @@ var App = /*#__PURE__*/ function() {
             value: function createModal() {
                 var _this = this;
                 var loader = new three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_11__.GLTFLoader();
-                var dracoLoader = new three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_12__.DRACOLoader();
+                var dracoLoader = new three_examples_jsm_loaders_DRACOLoader_js__WEBPACK_IMPORTED_MODULE_12__.DRACOLoader();
                 dracoLoader.setDecoderPath('/draco/'); // MUST be absolute /draco/
                 dracoLoader.setDecoderConfig({
                     type: 'js'
