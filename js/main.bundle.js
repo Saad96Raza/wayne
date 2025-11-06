@@ -105911,12 +105911,7 @@ var App = /*#__PURE__*/ function() {
                     height: 0,
                     duration: 2,
                     ease: "expo.out",
-                    stagger: 0.1
-                }).to($('.fade').get(), {
-                    opacity: 1,
-                    y: -40,
-                    duration: 2,
-                    ease: 'power2.inOut',
+                    stagger: 0.1,
                     onComplete: function() {
                         _this.locomotiveScroll.start();
                     }
@@ -106004,22 +105999,21 @@ var App = /*#__PURE__*/ function() {
                 var loader = new three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_11__.GLTFLoader();
                 var dracoLoader = new three_examples_jsm_loaders_DRACOLoader_js__WEBPACK_IMPORTED_MODULE_12__.DRACOLoader();
                 var repoName = window.location.pathname.split('/')[1];
-                dracoLoader.setDecoderPath('/' + repoName + '/draco/'); // MUST be absolute /draco/
+                dracoLoader.setDecoderPath('/' + repoName + '/draco/') // MUST be absolute /draco/
+                ;
                 dracoLoader.setDecoderConfig({
                     type: 'js'
                 });
-                loader.setDRACOLoader(dracoLoader); // ✅ THIS IS REQUIRED
+                loader.setDRACOLoader(dracoLoader) // ✅ THIS IS REQUIRED
+                ;
                 loader.load(_media_models_1_glb__WEBPACK_IMPORTED_MODULE_6__, function(gltf) {
-                    var model = gltf.scene;
-                    model.traverse(function(child) {
-                        if (!child.isMesh) return;
-                        // Apply your material
+                    gltf.scene.traverse(function(child) {
                         child.material = _this.material;
                         child.material.transparent = true;
                         child.material.opacity = 0;
                         child.scale.set(0.7, 0.7, 0.7);
                         child.position.set(0, 0, 0);
-                        if (!child.geometry.attributes.uv) {
+                        if (child.isMesh) {
                             child.geometry.computeBoundingBox();
                             var bbox = child.geometry.boundingBox;
                             var uv = new Float32Array(child.geometry.attributes.position.count * 2);
@@ -106029,23 +106023,21 @@ var App = /*#__PURE__*/ function() {
                             }
                             child.geometry.setAttribute("uv", new three__WEBPACK_IMPORTED_MODULE_9__.BufferAttribute(uv, 2));
                         }
+                        gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(child.material, {
+                            opacity: 1,
+                            duration: 2,
+                            ease: "none"
+                        });
+                        gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(child.rotation, {
+                            y: Math.PI * 2,
+                            duration: 10,
+                            repeat: -1,
+                            ease: "none"
+                        });
                     });
-                    _this.scene.add(model);
-                    gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(_this.material, {
-                        opacity: 1,
-                        duration: 2,
-                        ease: "none"
-                    });
-                    gsap__WEBPACK_IMPORTED_MODULE_8__["default"].to(model.rotation, {
-                        y: Math.PI * 2,
-                        duration: 10,
-                        repeat: -1,
-                        ease: "none"
-                    });
-                }, // ✅ Progress callback
-                function(xhr) {
-                    var percent = (xhr.loaded / xhr.total * 100).toFixed(0);
-                    if (percent === "100") {
+                    _this.scene.add(gltf.scene);
+                }, function(xhr) {
+                    if ((xhr.loaded / xhr.total * 100).toFixed(0) === "100") {
                         _this.createPreloader();
                     }
                 });
