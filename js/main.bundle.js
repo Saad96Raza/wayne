@@ -106003,7 +106003,8 @@ var App = /*#__PURE__*/ function() {
                 var _this = this;
                 var loader = new three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_11__.GLTFLoader();
                 var dracoLoader = new three_examples_jsm_loaders_DRACOLoader_js__WEBPACK_IMPORTED_MODULE_12__.DRACOLoader();
-                dracoLoader.setDecoderPath('/draco/'); // MUST be absolute /draco/
+                var repoName = window.location.pathname.split('/')[1];
+                dracoLoader.setDecoderPath('/' + repoName + '/draco/'); // MUST be absolute /draco/
                 dracoLoader.setDecoderConfig({
                     type: 'js'
                 });
