@@ -106037,9 +106037,7 @@ var App = /*#__PURE__*/ function() {
                     });
                     _this.scene.add(gltf.scene);
                 }, function(xhr) {
-                    if ((xhr.loaded / xhr.total * 100).toFixed(0) >= "100") {
-                        _this.createPreloader();
-                    }
+                    if (Number((xhr.loaded / xhr.total * 100).toFixed(0)) === 100) _this.createPreloader();
                 });
             }
         },
