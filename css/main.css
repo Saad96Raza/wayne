@@ -369,7 +369,6 @@ li {
   color: #f3ebec;
   word-spacing: 1rem;
   text-transform: capitalize;
-  line-height: 1;
 }
 
 .text-body{
@@ -401,7 +400,6 @@ html {
   box-sizing: border-box;
   /* Font family */
   font-family: "Raleway", "sans-serif";
-  /* To make rem units easier to work with (1rem = 10px) */
   font-size: 62.5%;
   /* Scrollbar Styling : Firefox */
   scrollbar-width: thin;
@@ -446,6 +444,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-family: "playfair";
+  background: #000000;
 }
 
 img,
@@ -1421,17 +1420,11 @@ footer .text-link {
   position: relative;
   height: 100vh;
 }
-.section.home-section-2 {
-  background: #000000;
-}
 .section.home-section-2 h1 {
   color: #f3ebec;
 }
-.section.home-section-2 .fade {
+.section.home-section-2 h1.fade {
   opacity: 0;
-}
-.section.home-section-3 {
-  background: #000000;
 }
 
 /* ======== */
