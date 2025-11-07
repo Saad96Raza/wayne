@@ -105240,7 +105240,6 @@ var App = /*#__PURE__*/ function() {
         this.createMaterial();
         this.createLights();
         this.createModal();
-        this.createReRender();
         this.addEventListeners();
         this.update();
     }
@@ -105253,6 +105252,7 @@ var App = /*#__PURE__*/ function() {
                     smooth: true,
                     lerp: 0.050
                 });
+                this.locomotiveScroll.stop();
                 this.locomotiveScroll.on('call', function(value, way) {
                     if (way === 'enter') {
                         if (value === 'bg-1') {
@@ -105263,7 +105263,6 @@ var App = /*#__PURE__*/ function() {
                         }
                     }
                 });
-                this.locomotiveScroll.stop();
             }
         },
         {
