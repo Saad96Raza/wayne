@@ -105468,7 +105468,7 @@ var App = /*#__PURE__*/ function() {
                         child.material = _this.material;
                         child.material.transparent = true;
                         child.material.opacity = 0;
-                        child.scale.set(0.7, 0.7, 0.7);
+                        child.scale.set(0.8, 0.8, 0.8);
                         child.position.set(0, 0, 0);
                         if (child.isMesh) {
                             child.geometry.computeBoundingBox();

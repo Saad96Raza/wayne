@@ -1424,14 +1424,14 @@ footer .text-link {
 .section.home-section-2 {
   background: #000000;
 }
-.section.home-section-3 {
-  background: #000000;
-}
-.section.home-section-3 h1 {
+.section.home-section-2 h1 {
   color: #f3ebec;
 }
-.section.home-section-3 .fade {
+.section.home-section-2 .fade {
   opacity: 0;
+}
+.section.home-section-3 {
+  background: #000000;
 }
 
 /* ======== */
@@ -4858,8 +4858,8 @@ video {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
-.pb-\[12rem\]{
-  padding-bottom: 12rem;
+.pt-\[12rem\]{
+  padding-top: 12rem;
 }
 .text-left{
   text-align: left;
