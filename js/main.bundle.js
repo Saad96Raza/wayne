@@ -105455,13 +105455,11 @@ var App = /*#__PURE__*/ function() {
                 var _this = this;
                 var loader = new three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_9__.GLTFLoader();
                 var dracoLoader = new three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_10__.DRACOLoader();
-                dracoLoader.setDecoderPath(window.location.href + 'draco/') // MUST be absolute /draco/
-                ;
+                dracoLoader.setDecoderPath(window.location.origin + '/draco/');
                 dracoLoader.setDecoderConfig({
                     type: 'js'
                 });
-                loader.setDRACOLoader(dracoLoader) // ✅ THIS IS REQUIRED
-                ;
+                loader.setDRACOLoader(dracoLoader);
                 loader.load(_media_models_1_glb__WEBPACK_IMPORTED_MODULE_4__, function(gltf) {
                     gltf.scene.traverse(function(child) {
                         child.material = _this.material;

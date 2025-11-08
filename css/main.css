@@ -4769,9 +4769,6 @@ video {
   border-start-end-radius: var(--radius-selector);
   border-end-end-radius: var(--radius-selector);
 }
-.absolute{
-  position: absolute;
-}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
