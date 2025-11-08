@@ -105455,7 +105455,7 @@ var App = /*#__PURE__*/ function() {
                 var _this = this;
                 var loader = new three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_9__.GLTFLoader();
                 var dracoLoader = new three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_10__.DRACOLoader();
-                dracoLoader.setDecoderPath(window.location.origin + '/draco/');
+                dracoLoader.setDecoderPath(window.location.href + '/draco/');
                 dracoLoader.setDecoderConfig({
                     type: 'js'
                 });
