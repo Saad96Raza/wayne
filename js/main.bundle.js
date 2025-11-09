@@ -105394,7 +105394,7 @@ var App = /*#__PURE__*/ function() {
                     _this.scene.add(gltf.scene);
                 }, function(xhr) {
                     if (Number((xhr.loaded / xhr.total * 100).toFixed(0)) >= 100) {
-                        $(window).on("load", _this.createPreloader().bind(_this));
+                        $(window).on("load", _this.createPreloader());
                     }
                 });
             }
