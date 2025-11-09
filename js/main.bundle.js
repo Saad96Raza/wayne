@@ -20218,100 +20218,6 @@ module.exports = __webpack_require__.p + "media/texture.png";
 module.exports = __webpack_require__.p + "media/models/1.glb";
 
 }),
-"./src/apps/contact/index.js": 
-/*!***********************************!*\
-  !*** ./src/apps/contact/index.js ***!
-  \***********************************/
-(function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (Contact)
-});
-function _class_call_check(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-        throw new TypeError("Cannot call a class as a function");
-    }
-}
-function _defineProperties(target, props) {
-    for(var i = 0; i < props.length; i++){
-        var descriptor = props[i];
-        descriptor.enumerable = descriptor.enumerable || false;
-        descriptor.configurable = true;
-        if ("value" in descriptor) descriptor.writable = true;
-        Object.defineProperty(target, descriptor.key, descriptor);
-    }
-}
-function _create_class(Constructor, protoProps, staticProps) {
-    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) _defineProperties(Constructor, staticProps);
-    return Constructor;
-}
-var Contact = /*#__PURE__*/ function() {
-    "use strict";
-    function Contact() {
-        _class_call_check(this, Contact);
-        this.createReRender();
-    }
-    _create_class(Contact, [
-        {
-            key: "createReRender",
-            value: function createReRender() {}
-        }
-    ]);
-    return Contact;
-}();
-
-
-
-}),
-"./src/apps/home/index.js": 
-/*!********************************!*\
-  !*** ./src/apps/home/index.js ***!
-  \********************************/
-(function (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (Home)
-});
-function _class_call_check(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-        throw new TypeError("Cannot call a class as a function");
-    }
-}
-function _defineProperties(target, props) {
-    for(var i = 0; i < props.length; i++){
-        var descriptor = props[i];
-        descriptor.enumerable = descriptor.enumerable || false;
-        descriptor.configurable = true;
-        if ("value" in descriptor) descriptor.writable = true;
-        Object.defineProperty(target, descriptor.key, descriptor);
-    }
-}
-function _create_class(Constructor, protoProps, staticProps) {
-    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) _defineProperties(Constructor, staticProps);
-    return Constructor;
-}
-var Home = /*#__PURE__*/ function() {
-    "use strict";
-    function Home() {
-        _class_call_check(this, Home);
-        this.createReRender();
-    }
-    _create_class(Home, [
-        {
-            key: "createReRender",
-            value: function createReRender() {}
-        }
-    ]);
-    return Home;
-}();
-
-
-
-}),
 "./node_modules/three/build/three.core.js": 
 /*!************************************************!*\
   !*** ./node_modules/three/build/three.core.js ***!
@@ -105283,17 +105189,15 @@ var __webpack_exports__ = {};
   !*** ./src/apps/index.js ***!
   \***************************/
 __webpack_require__.r(__webpack_exports__);
-/* ESM import */var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ "./src/apps/home/index.js");
-/* ESM import */var _contact__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contact */ "./src/apps/contact/index.js");
-/* ESM import */var gsap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* ESM import */var three__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.core.js");
-/* ESM import */var three__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
-/* ESM import */var three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! three/examples/jsm/loaders/GLTFLoader */ "./node_modules/three/examples/jsm/loaders/GLTFLoader.js");
-/* ESM import */var three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! three/examples/jsm/loaders/DRACOLoader */ "./node_modules/three/examples/jsm/loaders/DRACOLoader.js");
-/* ESM import */var locomotive_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! locomotive-scroll */ "./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js");
-/* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
-/* ESM import */var _media_models_1_glb__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../media/models/1.glb */ "./src/media/models/1.glb");
-/* ESM import */var _media_banner_texture_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../media/banner/texture.png */ "./src/media/banner/texture.png");
+/* ESM import */var gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* ESM import */var three__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.core.js");
+/* ESM import */var three__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! three */ "./node_modules/three/build/three.module.js");
+/* ESM import */var three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! three/examples/jsm/loaders/GLTFLoader */ "./node_modules/three/examples/jsm/loaders/GLTFLoader.js");
+/* ESM import */var three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! three/examples/jsm/loaders/DRACOLoader */ "./node_modules/three/examples/jsm/loaders/DRACOLoader.js");
+/* ESM import */var locomotive_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! locomotive-scroll */ "./node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js");
+/* ESM import */var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scss/main.scss */ "./src/scss/main.scss");
+/* ESM import */var _media_models_1_glb__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../media/models/1.glb */ "./src/media/models/1.glb");
+/* ESM import */var _media_banner_texture_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../media/banner/texture.png */ "./src/media/banner/texture.png");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 function _class_call_check(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -105314,8 +105218,6 @@ function _create_class(Constructor, protoProps, staticProps) {
     if (staticProps) _defineProperties(Constructor, staticProps);
     return Constructor;
 }
-
-
 
 
 
@@ -105346,7 +105248,7 @@ var App = /*#__PURE__*/ function() {
         {
             key: "createSmoothScroll",
             value: function createSmoothScroll() {
-                this.locomotiveScroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_2__["default"]({
+                this.locomotiveScroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_0__["default"]({
                     el: $('.smooth-scroll').get(0),
                     smooth: true,
                     lerp: 0.050
@@ -105368,7 +105270,7 @@ var App = /*#__PURE__*/ function() {
             key: "createPreloader",
             value: function createPreloader() {
                 var _this = this;
-                this.preloader = gsap__WEBPACK_IMPORTED_MODULE_6__["default"].timeline().to($('.slide svg').get(), {
+                this.preloader = gsap__WEBPACK_IMPORTED_MODULE_4__["default"].timeline().to($('.slide svg').get(), {
                     scaleY: 1,
                     duration: 2,
                     ease: "none"
@@ -105391,25 +105293,25 @@ var App = /*#__PURE__*/ function() {
         {
             key: "createCamera",
             value: function createCamera() {
-                this.camera = new three__WEBPACK_IMPORTED_MODULE_7__.PerspectiveCamera(70, this.screen.width / this.screen.height, 0.01, 10);
+                this.camera = new three__WEBPACK_IMPORTED_MODULE_5__.PerspectiveCamera(70, this.screen.width / this.screen.height, 0.01, 10);
                 this.camera.position.z = 1;
             }
         },
         {
             key: "createScene",
             value: function createScene() {
-                this.scene = new three__WEBPACK_IMPORTED_MODULE_7__.Scene();
+                this.scene = new three__WEBPACK_IMPORTED_MODULE_5__.Scene();
             }
         },
         {
             key: "createMaterial",
             value: function createMaterial() {
-                var texture = new three__WEBPACK_IMPORTED_MODULE_7__.TextureLoader().load(_media_banner_texture_png__WEBPACK_IMPORTED_MODULE_5__, function(tex) {
-                    tex.wrapS = three__WEBPACK_IMPORTED_MODULE_7__.RepeatWrapping;
-                    tex.wrapT = three__WEBPACK_IMPORTED_MODULE_7__.RepeatWrapping;
+                var texture = new three__WEBPACK_IMPORTED_MODULE_5__.TextureLoader().load(_media_banner_texture_png__WEBPACK_IMPORTED_MODULE_3__, function(tex) {
+                    tex.wrapS = three__WEBPACK_IMPORTED_MODULE_5__.RepeatWrapping;
+                    tex.wrapT = three__WEBPACK_IMPORTED_MODULE_5__.RepeatWrapping;
                     tex.repeat.set(2, 2);
                 });
-                this.material = new three__WEBPACK_IMPORTED_MODULE_7__.MeshStandardMaterial({
+                this.material = new three__WEBPACK_IMPORTED_MODULE_5__.MeshStandardMaterial({
                     map: texture,
                     roughness: 0.1,
                     metalness: 0.1
@@ -105419,13 +105321,13 @@ var App = /*#__PURE__*/ function() {
         {
             key: "createLights",
             value: function createLights() {
-                var ambientLight = new three__WEBPACK_IMPORTED_MODULE_7__.AmbientLight(0xffffff, 1);
+                var ambientLight = new three__WEBPACK_IMPORTED_MODULE_5__.AmbientLight(0xffffff, 1);
                 this.scene.add(ambientLight);
-                var directionalLight = new three__WEBPACK_IMPORTED_MODULE_7__.DirectionalLight(0xffffff, 1);
+                var directionalLight = new three__WEBPACK_IMPORTED_MODULE_5__.DirectionalLight(0xffffff, 1);
                 directionalLight.position.set(5, 10, 7);
                 directionalLight.castShadow = true;
                 this.scene.add(directionalLight);
-                var pointLight = new three__WEBPACK_IMPORTED_MODULE_7__.PointLight(0xffffff, 1);
+                var pointLight = new three__WEBPACK_IMPORTED_MODULE_5__.PointLight(0xffffff, 1);
                 pointLight.position.set(-5, 5, -5);
                 this.scene.add(pointLight);
             }
@@ -105433,7 +105335,7 @@ var App = /*#__PURE__*/ function() {
         {
             key: "createRenderer",
             value: function createRenderer() {
-                this.renderer = new three__WEBPACK_IMPORTED_MODULE_8__.WebGLRenderer({
+                this.renderer = new three__WEBPACK_IMPORTED_MODULE_6__.WebGLRenderer({
                     antialias: true
                 });
                 this.renderer.setSize(this.screen.width, this.screen.height);
@@ -105453,14 +105355,14 @@ var App = /*#__PURE__*/ function() {
             key: "createModal",
             value: function createModal() {
                 var _this = this;
-                var loader = new three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_9__.GLTFLoader();
-                var dracoLoader = new three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_10__.DRACOLoader();
+                var loader = new three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_7__.GLTFLoader();
+                var dracoLoader = new three_examples_jsm_loaders_DRACOLoader__WEBPACK_IMPORTED_MODULE_8__.DRACOLoader();
                 dracoLoader.setDecoderPath(window.location.href + '/draco/');
                 dracoLoader.setDecoderConfig({
                     type: 'js'
                 });
                 loader.setDRACOLoader(dracoLoader);
-                loader.load(_media_models_1_glb__WEBPACK_IMPORTED_MODULE_4__, function(gltf) {
+                loader.load(_media_models_1_glb__WEBPACK_IMPORTED_MODULE_2__, function(gltf) {
                     gltf.scene.traverse(function(child) {
                         child.material = _this.material;
                         child.material.transparent = true;
@@ -105475,14 +105377,14 @@ var App = /*#__PURE__*/ function() {
                                 uv[i * 2] = (child.geometry.attributes.position.getX(i) - bbox.min.x) / (bbox.max.x - bbox.min.x);
                                 uv[i * 2 + 1] = (child.geometry.attributes.position.getY(i) - bbox.min.y) / (bbox.max.y - bbox.min.y);
                             }
-                            child.geometry.setAttribute("uv", new three__WEBPACK_IMPORTED_MODULE_7__.BufferAttribute(uv, 2));
+                            child.geometry.setAttribute("uv", new three__WEBPACK_IMPORTED_MODULE_5__.BufferAttribute(uv, 2));
                         }
-                        gsap__WEBPACK_IMPORTED_MODULE_6__["default"].to(child.material, {
+                        gsap__WEBPACK_IMPORTED_MODULE_4__["default"].to(child.material, {
                             opacity: 1,
-                            duration: 2,
+                            duration: 1,
                             ease: "none"
                         });
-                        gsap__WEBPACK_IMPORTED_MODULE_6__["default"].to(child.rotation, {
+                        gsap__WEBPACK_IMPORTED_MODULE_4__["default"].to(child.rotation, {
                             y: Math.PI * 2,
                             duration: 10,
                             repeat: -1,
@@ -105491,7 +105393,9 @@ var App = /*#__PURE__*/ function() {
                     });
                     _this.scene.add(gltf.scene);
                 }, function(xhr) {
-                    if (Number((xhr.loaded / xhr.total * 100).toFixed(0)) >= 100) _this.createPreloader();
+                    if (Number((xhr.loaded / xhr.total * 100).toFixed(0)) >= 100) {
+                        $(window).on("load", _this.createPreloader().bind(_this));
+                    }
                 });
             }
         },
