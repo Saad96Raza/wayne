@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkRspack"] = self["webpackChunkRspack"] || []).push([["node_modules_three_examples_jsm_postprocessing_RenderPass_js"], {
+(self["webpackChunkRspack"] = self["webpackChunkRspack"] || []).push([["RenderPass"], {
 "./node_modules/three/examples/jsm/postprocessing/Pass.js": 
 /*!****************************************************************!*\
   !*** ./node_modules/three/examples/jsm/postprocessing/Pass.js ***!

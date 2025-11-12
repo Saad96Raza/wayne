@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkRspack"] = self["webpackChunkRspack"] || []).push([["vendors-node_modules_three_examples_jsm_loaders_DRACOLoader_js"], {
+(self["webpackChunkRspack"] = self["webpackChunkRspack"] || []).push([["DRACOLoader"], {
 "./node_modules/three/examples/jsm/loaders/DRACOLoader.js": 
 /*!****************************************************************!*\
   !*** ./node_modules/three/examples/jsm/loaders/DRACOLoader.js ***!

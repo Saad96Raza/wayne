@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkRspack"] = self["webpackChunkRspack"] || []).push([["vendors-node_modules_three_examples_jsm_postprocessing_OutlinePass_js"], {
+(self["webpackChunkRspack"] = self["webpackChunkRspack"] || []).push([["OutlinePass"], {
 "./node_modules/three/examples/jsm/postprocessing/OutlinePass.js": 
 /*!***********************************************************************!*\
   !*** ./node_modules/three/examples/jsm/postprocessing/OutlinePass.js ***!

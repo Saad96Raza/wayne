@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkRspack"] = self["webpackChunkRspack"] || []).push([["vendors-node_modules_three_examples_jsm_postprocessing_EffectComposer_js"], {
+(self["webpackChunkRspack"] = self["webpackChunkRspack"] || []).push([["EffectComposer"], {
 "./node_modules/three/examples/jsm/postprocessing/EffectComposer.js": 
 /*!**************************************************************************!*\
   !*** ./node_modules/three/examples/jsm/postprocessing/EffectComposer.js ***!

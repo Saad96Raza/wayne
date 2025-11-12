@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkRspack"] = self["webpackChunkRspack"] || []).push([["vendors-node_modules_three_examples_jsm_loaders_GLTFLoader_js"], {
+(self["webpackChunkRspack"] = self["webpackChunkRspack"] || []).push([["GLTFLoader"], {
 "./node_modules/three/examples/jsm/loaders/GLTFLoader.js": 
 /*!***************************************************************!*\
   !*** ./node_modules/three/examples/jsm/loaders/GLTFLoader.js ***!
