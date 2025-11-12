@@ -20629,6 +20629,7 @@ function _ts_generator(thisArg, body) {
 }
 
 
+var GLTFLoader, DRACOLoader, EffectComposer, RenderPass, OutlinePass, LocomotiveScroll;
 var loadModules = /*#__PURE__*/ function() {
     var _ref = _async_to_generator(function() {
         return _ts_generator(this, function(_state) {
