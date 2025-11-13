@@ -4731,6 +4731,24 @@ video {
   margin-inline-end: calc(0.25rem * -3);
   border-inline-start: var(--border) solid color-mix(in oklab, currentColor 10%, #0000);
 }
+.link{
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+.link:focus{
+  --tw-outline-style: none;
+  outline-style: none;
+}
+@media (forced-colors: active){
+  .link:focus{
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+}
+.link:focus-visible{
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
 .status{
   display: inline-block;
   aspect-ratio: 1 / 1;
