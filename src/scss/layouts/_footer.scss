@@ -5,7 +5,7 @@
 
 
 .footer-top{
-        background: ss-var($colors,primary,'primary1');
+        // background: ss-var($colors,primary,'primary1');
     .social-icons{
         svg{
              fill:ss-var($colors,primary,'primary3');
@@ -23,10 +23,14 @@
 }
 
 footer{
-    background: ss-var($colors,primary,'primary2');
     .text-link{
         color: ss-var($colors,neutral,'white');
-        
     }
-   
+}
+
+.footer-top,
+.footer {
+  transition: background-color 2s ease; 
+    background-color: transparent;
+
 }

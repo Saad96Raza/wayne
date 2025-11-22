@@ -1,4 +1,6 @@
 mixin Title(title,tag,Class)
-    #{tag}(class="text-xl fade-class '"+Class+"'"  data-scroll data-scroll-class="is-in-view") #{title} 
+    #{tag}(class="fade-class "+Class+""  data-scroll data-scroll-class="is-in-view" data-scroll-repeat=true) #{title}
+mixin Text(title,Class)
+    p(class="text-link fade-class "+Class+""   data-scroll data-scroll-class="is-in-view" data-scroll-repeat=true) #{title}     
 mixin Link(title,url)
     a(href=url class="text-link link_underline active") #{title}

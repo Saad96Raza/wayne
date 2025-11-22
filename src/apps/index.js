@@ -1,52 +1,114 @@
-import Home from './home';
-import Contact from './contact';
-import barba from '@barba/core';
 import GSAP from 'gsap';
-import * as THREE from 'three';
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import LocomotiveScroll from 'locomotive-scroll';
-import Atropos from 'atropos';
+import { Scene, PerspectiveCamera, WebGLRenderer, MeshStandardMaterial, TextureLoader, RepeatWrapping, Vector2, BufferAttribute, AmbientLight, DirectionalLight } from "three"
 
+let GLTFLoader, DRACOLoader, EffectComposer, RenderPass, OutlinePass;
+
+const loadModules = async () => {
+  GLTFLoader = (await import(
+    /* webpackChunkName: "GLTFLoader" */
+    "three/examples/jsm/loaders/GLTFLoader.js"
+  )).GLTFLoader;
+
+  DRACOLoader = (await import(
+    /* webpackChunkName: "DRACOLoader" */
+    "three/examples/jsm/loaders/DRACOLoader.js"
+  )).DRACOLoader;
+
+  EffectComposer = (await import(
+    /* webpackChunkName: "EffectComposer" */
+    "three/examples/jsm/postprocessing/EffectComposer.js"
+  )).EffectComposer;
+
+  RenderPass = (await import(
+    /* webpackChunkName: "RenderPass" */
+    "three/examples/jsm/postprocessing/RenderPass.js"
+  )).RenderPass;
+
+  OutlinePass = (await import(
+    /* webpackChunkName: "OutlinePass" */
+    "three/examples/jsm/postprocessing/OutlinePass.js"
+  )).OutlinePass;
+};
+
+await loadModules();
+
+
+import LocomotiveScroll from 'locomotive-scroll'
+import 'owl.carousel'
+import 'owl.carousel/dist/assets/owl.carousel.css'
 import _ from '../scss/main.scss'
-import shoe from '../media/models/2.glb'
-import matcap from '../media/matcap/5.png'
+import shoe from '../media/models/1.glb'
+import matcap from '../media/banner/texture.png'
+import {isMobile} from '../apps/extra/media.js'
 
 
 class App{
     constructor(){
-        this.pages = {
-            home : new Home(),
-            contact : new Contact()
-        }
+
         this.screen ={
             width : window.innerWidth,
             height: window.innerHeight
 
         }
+        this.createSlider()
         this.createSmoothScroll()
-        this.createPreloader()
-        this.createAstropos()
         this.createCamera()
         this.createScene()
-        this.createGeometry()
         this.createMaterial()
-        // this.createMesh()
-        this.createLights()
         this.createRenderer()
+        this.createLights()
+        this.createComposer()
         this.createModal()
-        this.createAjaxNavigation()
-        this.createReRender()
+        this.createResize()
         this.addEventListeners()
         this.update()
+        
+    }
+    createSlider(){
+        $(function(){
+            $('.owl-carousel').owlCarousel({
+                items: 1,              
+                loop: true,             
+                autoplay: true,         
+                autoplayTimeout: 3000,  
+                autoplayHoverPause: false,
+                mouseDrag: false, 
+                touchDrag: false,
+                pullDrag: false,
+                animateOut: 'fadeOut', 
+                animateIn: 'fadeIn',    
+                smartSpeed: 1000,
+                dots: false,             
+                nav: false       
+            })
+        })
         
     }
     createSmoothScroll(){
         this.locomotiveScroll = new LocomotiveScroll({
             el: $('.smooth-scroll').get(0),
             smooth: true,
-            lerp:0.050
+            lerp:0.050,
+            resetNativeScroll:true,
+            smartphone: {
+                breakpoint: 768,   
+                smooth: true,
+                direction: 'vertical',
+                multiplier:2
+            },
         })
-        this.locomotiveScroll.stop()	
+        this.locomotiveScroll.on('call', (value, way) => {
+            if (way === 'enter') {
+                if (value === 'bg-1') {
+                    $(".footer-top").css("background-color", "#7c2529"); 
+                }
+                if (value === 'bg-2') {
+                    $(".footer").css("background-color", "#4d4845");
+                }
+            }
+    
+        })
+        this.locomotiveScroll.stop()
     }
     createPreloader(){
         this.preloader = GSAP.timeline()
@@ -65,70 +127,53 @@ class App{
             duration: 2,
             ease: "expo.out",
             stagger:0.1,
-            
-        })
-        .to($('.fade').get(),{
-            opacity: 1,
-            y:-40,
-            duration: 2,
-            ease: 'power2.inOut',
             onComplete:()=>{
+                this.locomotiveScroll.update()
                 this.locomotiveScroll.start()
             }
+            
         })
+
         
     }
-    createAstropos(){
-        Atropos({
-            el: '.my-atropos',
-            activeOffset: 100,
-            shadow: false,
-            alwaysActive:true,
-            highlight: false,
-            duration:1000
-        })
-    }
+
 
     createCamera(){
-        this.camera = new THREE.PerspectiveCamera( 70, this.screen.width / this.screen.height, 0.01, 10 );
+        this.camera = new PerspectiveCamera( 70, this.screen.width / this.screen.height, 0.01, 10 );
         this.camera.position.z = 1;
     }
     createScene(){
-        this.scene = new THREE.Scene();
+        this.scene = new Scene();
         
     }
-    createGeometry(){
-        this.geometry = new THREE.BoxGeometry( 0.5, 0.5, 0.5 );
-
-    }
     createMaterial(){
-        const textureLoader = new THREE.TextureLoader();
-        const matcapTexture = textureLoader.load(matcap); // matcap must be URL string
+      const texture = new TextureLoader().load(matcap, (tex) => {
+            tex.wrapS = RepeatWrapping;
+            tex.wrapT = RepeatWrapping;
+            tex.repeat.set(2, 2);
 
-        this.material = new THREE.MeshMatcapMaterial({
-            matcap: matcapTexture,
+        })
+
+        this.material = new MeshStandardMaterial({
+            map: texture,
+            roughness: 0.1,
+            metalness: 0.1,
         });
         
     }
-    createMesh(){
-        this.mesh = new THREE.Mesh( this.geometry, this.material );
-        this.scene.add( this.mesh );
-    }
+
+
     createLights(){
-        const ambientLight = new THREE.AmbientLight(0xffffff, 1);  
+        const ambientLight = new AmbientLight(0xffffff, 1);  
         this.scene.add(ambientLight);
 
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+        const directionalLight = new DirectionalLight(0xffffff, 1);
         directionalLight.position.set(5, 10, 7); 
-        directionalLight.castShadow = true;      
         this.scene.add(directionalLight);
 
-        const pointLight = new THREE.PointLight(0xffffff, 1);
-        pointLight.position.set(-5, 5, -5);
-        this.scene.add(pointLight);
     }
     createRenderer(){
-        this.renderer = new THREE.WebGLRenderer( {antialias: true} )
+        this.renderer = new WebGLRenderer( {antialias: true} )
         this.renderer.setSize( this.screen.width, this.screen.height )
         $('.home-section-1').append(this.renderer.domElement)
     }
@@ -137,99 +182,103 @@ class App{
         this.camera.updateProjectionMatrix()
         this.renderer.setSize(window.innerWidth, window.innerHeight)
         this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+    }
+    createComposer(){
+        this.composer = new EffectComposer(this.renderer);
+        this.composer.addPass(new RenderPass(this.scene, this.camera));
+
+        this.outlinePass = new OutlinePass(
+        new Vector2(this.screen.width,this.screen.height), 
+            this.scene,
+            this.camera
+        )
+        this.outlinePass.edgeStrength = 2.0;         
+        this.outlinePass.edgeGlow = 3.0;           
+        this.outlinePass.edgeThickness = 1.0;
+        this.outlinePass.visibleEdgeColor.set(0xffaa4d)  
+        this.composer.addPass(this.outlinePass)
+
+
     }
     createModal(){
-        const loader = new GLTFLoader();
-        loader.load(shoe, (gltf) => {
-            gltf.scene.traverse((child) => {
-                if (child.isMesh) {
-                    child.material = this.material; // Apply matcap
-                    child.material.transparent = true;   // ✅ allows fading in
-                    child.material.opacity = 0;          // ✅ start invisible
-                    child.castShadow = true;
-                    child.receiveShadow = true;
-                    child.scale.set(0.7,0.7,0.7)
-                    child.position.set(0,0,0)
-                    if (child.material) {
-                        child.material.needsUpdate = true;
+        const selectedMeshes = [] 
+
+        const loader = new GLTFLoader()
+        const dracoLoader = new DRACOLoader()
+
+        dracoLoader.setDecoderPath(window.location.href+'/draco/')  
+        dracoLoader.setDecoderConfig({ type: 'js' })
+        loader.setDRACOLoader(dracoLoader)  
+
+        loader.load(shoe,(gltf) => {
+
+                gltf.scene.traverse((child) => {
+
+                    child.material = this.material;
+                    child.material.transparent = true;
+                    child.material.opacity = 0;
+
+                    child.scale.set(0.8, 0.8, 0.8);
+                    child.position.set(0, 0, 0);
+
+                    if (child.isMesh) {
+                        selectedMeshes.push(child);
+                        child.geometry.computeBoundingBox();
+                        const bbox = child.geometry.boundingBox;
+
+                        const uv = new Float32Array(child.geometry.attributes.position.count * 2);
+                        for (let i = 0; i < child.geometry.attributes.position.count; i++) {
+                            uv[i * 2] = (child.geometry.attributes.position.getX(i) - bbox.min.x) / (bbox.max.x - bbox.min.x);
+                            uv[i * 2 + 1] = (child.geometry.attributes.position.getY(i) - bbox.min.y) / (bbox.max.y - bbox.min.y);
+                        }
+                        child.geometry.setAttribute("uv", new BufferAttribute(uv, 2));
                     }
                     GSAP.to(child.material, {
                         opacity: 1,
-                        duration: 3,     // fade duration (seconds)
-                        ease:'none'
+                        duration: 1,
+                        ease: "none"
                     });
-                    GSAP.to(child.rotation,{
-                        y:360,
-                        repeat:-1,
-                        duration:600,
-                        ease:'none'
 
+                    GSAP.to(child.rotation, {
+                        y: Math.PI * 2,
+                        duration: 18,
+                        repeat: -1,
+                        ease: "none"
                     })
+                })
+                this.outlinePass.selectedObjects = selectedMeshes;  // ✅ apply outline to them
+                this.scene.add(gltf.scene);
+            },
+            (xhr) => {
+                if (Number(((xhr.loaded / xhr.total) * 100).toFixed(0)) >= 100) {
+                    $(window).on("load",this.createPreloader())
                 }
-            })
-            this.scene.add(gltf.scene)
-        })
+            },
+        )
 
     }
- 
-    createAjaxNavigation(){
 
-        const easeIn = (container,done)=> {
-            return GSAP.to(container, {
-                autoAlpha: 0,
-                duration: 1,
-                ease: 'none',
-                onComplete: ()=> done()
-            })
-        }
-
-        const  easeOut = (container) => {
-
-            return GSAP.from(container, {
-                autoAlpha: 0,
-                duration: 1,
-                ease: 'none',
-            })
-        }
-
-       barba.init({
-                preventRunning: true,
-                transitions: [
-                {
-                once({ next }) {
-                     easeOut(next.container);
-                },
-                leave({ current }) {
-                    const done = this.async();
-                    easeIn(current.container, done);
-                },
-                enter({ next }) {
-                     easeOut(next.container);
-                }
-                }
-            ],
-            
-        })
-        
+    createResize(){
+        new ResizeObserver(() => this.locomotiveScroll.update()).observe(
+            $('.smooth-scroll').get(0)
+        );
     }
-
-    createReRender(){
-        
-        barba.hooks.before(() => {
-        })
-    
-        barba.hooks.after(() => {
-            this.pages.home.createReRender() 
-           
-        })
-    }
-
     addEventListeners(){
         $(window).on("resize",this.onResize.bind(this))
-        $(window).on("load",this.createPreloader.bind(this))
     }
     update(){
         this.renderer.render( this.scene, this.camera )
+        this.composer.render()
+
+        if (isMobile()) {
+            this.camera.zoom = 0.5
+            this.camera.updateProjectionMatrix()
+        }else {
+            this.camera.zoom = 1
+            this.camera.updateProjectionMatrix()
+        }
+
         window.requestAnimationFrame(this.update.bind(this))
     }
 }
@@ -237,3 +286,4 @@ class App{
 $(function(){
     new App()
 })
+

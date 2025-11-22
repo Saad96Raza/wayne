@@ -13,7 +13,7 @@ $radius: calc(#{$height} / 2);
 $borders: calc(#{$border} * 2);
 
 // Apply directly to inputs
-.form{
+.wayne-form{
   input[type="text"] {
   box-sizing: border-box;
   width: 100%;

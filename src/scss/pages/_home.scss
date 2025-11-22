@@ -9,15 +9,19 @@
     &.home-section-1{
         position: relative;
         height: 100vh;
+        width: 100%;
     }
-    &.home-section-3{
+    &.home-section-2{
         h1{
             color: ss-var($colors,neutral,'white');
+            &.fade{
+                opacity: 0;
+            }   
         }
-        .fade{
-            opacity: 0;
-        }
+        
+
     }
+   
 
     
 }

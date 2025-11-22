@@ -50,14 +50,14 @@
 .text-xxl{
     @apply 
     leading-none
-    uppercase;
+    capitalize;
 
 }
 
 .text-xl{
     font-family: $font-philosopher;
     color: ss-var($colors,primary,'primary3');  
-    @apply leading-none tracking-wide  uppercase font-medium; 
+    @apply leading-none  tracking-wide  uppercase font-medium; 
 }
 
 .text-lg {
@@ -74,7 +74,7 @@
     font-family: $font-balestya;
     color: ss-var($colors,neutral,'white');
     word-spacing: rem(16);
-    @apply leading-none capitalize; 
+    @apply  capitalize; 
 }
 
 .text-body {
@@ -89,9 +89,8 @@
 }
 
 .text-link {
- @apply  capitalize;
  color: ss-var($colors,neutral,'white');
- font-family: $font-helevetica;  
+ font-family: $font-helevetica;
 }
 
 .text-direction {

@@ -5,8 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const rspack  = require('@rspack/core')
 const { ProvidePlugin } = require('@rspack/core');
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-const imageminWebp = require("imagemin-webp");
-
 const pugPages = glob.sync('src/views/pages/*.pug')
 
 
@@ -15,6 +13,7 @@ module.exports = {
     entry : path.resolve(__dirname, "src/apps/index.js"),
     output :{
         path : path.resolve(__dirname,'dist'),
+        chunkFilename: 'js/vendor/[name].js',
         filename:'js/[name].bundle.js',
         clean: true,
     },
@@ -29,7 +28,7 @@ module.exports = {
               
             },
         },
-        compress: true,
+        compress: false,
         hot:false,
         port: 2000,
     },
@@ -106,6 +105,7 @@ module.exports = {
         new rspack.CopyRspackPlugin({
             patterns: [
                 { from: 'src/media', to: 'media'},
+                { from: 'src/draco', to: 'draco'}
             ],
         }),
         new ProvidePlugin({

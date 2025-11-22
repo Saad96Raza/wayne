@@ -6,10 +6,11 @@
 /* ======== */
 
 
+
 // Fade-in animation for reveal elements
 .fade-class {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(rem(40));
   transition: opacity 1s ease-out, transform 1s ease-out;
   transition-delay: 0.5s;
 
@@ -20,17 +21,16 @@
 }
 
 .clip-reveal {
-  clip-path: inset(0 0 100% 0);
+  clip-path: circle(0% at 50% 50%);
   opacity: 0;
-  transform: scale(1.4); // slightly reduced scale (more subtle)
+  transform: scale(1.4); // optional zoom-out reveal
   transition:
-    clip-path 3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    transform 3s cubic-bezier(0.19, 1, 0.22, 1),
-    opacity 0.6s ease-out;
-  transition-delay: 1s; // reveal delay (optional)
+  clip-path 6.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  transform 6.2s cubic-bezier(0.19, 1, 0.22, 1),
+  opacity 0.6s ease-out;
 
   &.is-in-view {
-    clip-path: inset(0 0 0 0);
+    clip-path: circle(100% at 50% 50%); // expands out
     transform: scale(1);
     opacity: 1;
   }

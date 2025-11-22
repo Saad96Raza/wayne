@@ -1,20 +1,68 @@
 doctype html
-head
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  meta(http-equiv='X-UA-Compatible' content='ie=edge')
-  title #{htmlWebpackPlugin.options.title}
-body(data-barba="wrapper")
-  div(class="smooth-scroll")             
-    div(class="preloader grid grid-cols-2")
-      div(class="slide")
+html(lang="en")
+  head
+      meta(charset="UTF-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0")
+      meta(http-equiv="X-UA-Compatible" content="ie=edge")
+
+      // 🔹 Basic SEO
+      title The Wayne – High-Class Hideout | Modern Luxury Apartments in Crestwood
+      meta(name="description" content="Discover The Wayne — a modern Crestwood community inspired by the lucky horseshoe. Enjoy resort-style living, a state-of-the-art fitness center, and sleek luxury apartments within the top-rated Lindbergh School District.")
+      meta(name="keywords" content="The Wayne apartments, luxury apartments Crestwood, Lindbergh School District, modern apartment design, resort-style living, high-class hideout, smart apartments, upscale community, Missouri living, The Wayne Crestwood")
+      meta(name="author" content="The Wayne Residences")
+
+      // 🔹 Open Graph (for social sharing)
+      meta(property="og:title" content="The Wayne – High-Class Hideout | Modern Luxury Apartments in Crestwood")
+      meta(property="og:description" content="The Wayne blends bold design, refined architecture, and modern comfort. Live where balance meets sophistication — resort-style amenities and sleek apartments in the Lindbergh School District.")
+      meta(property="og:type" content="website")
+      meta(property="og:url" content="https://thewayne.com")
+      meta(property="og:image" content="https://thewayne.com/media/logo.png")
+
+      // 🔹 Twitter Card
+      meta(name="twitter:card" content="summary_large_image")
+      meta(name="twitter:title" content="The Wayne – High-Class Hideout | Modern Luxury Apartments in Crestwood")
+      meta(name="twitter:description" content="Experience refined modern living at The Wayne. Bold design, warm textures, and elevated comfort — the perfect balance of work, play, and relaxation.")
+      meta(name="twitter:image" content="https://thewayne.com/media/logo.png")
+
+      // 🔹 Favicon and App Icons
+      link(rel="apple-touch-icon" sizes="57x57" href="./media/favicon/apple-icon-57x57.png")
+      link(rel="apple-touch-icon" sizes="60x60" href="./media/favicon/apple-icon-60x60.png")
+      link(rel="apple-touch-icon" sizes="72x72" href="./media/favicon/apple-icon-72x72.png")
+      link(rel="apple-touch-icon" sizes="76x76" href="./media/favicon/apple-icon-76x76.png")
+      link(rel="apple-touch-icon" sizes="114x114" href="./media/favicon/apple-icon-114x114.png")
+      link(rel="apple-touch-icon" sizes="120x120" href="./media/favicon/apple-icon-120x120.png")
+      link(rel="apple-touch-icon" sizes="144x144" href="./media/favicon/apple-icon-144x144.png")
+      link(rel="apple-touch-icon" sizes="152x152" href="./media/favicon/apple-icon-152x152.png")
+      link(rel="apple-touch-icon" sizes="180x180" href="./media/favicon/apple-icon-180x180.png")
+      link(rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png")
+      link(rel="icon" type="image/png" sizes="32x32" href="./media/favicon/favicon-32x32.png")
+      link(rel="icon" type="image/png" sizes="96x96" href="./media/favicon/favicon-96x96.png")
+      link(rel="icon" type="image/png" sizes="16x16" href="./media/favicon/favicon-16x16.png")
+      link(rel="manifest" href="./media/favicon/manifest.json")
+      meta(name="msapplication-TileColor" content="#ffffff")
+      meta(name="msapplication-TileImage" content="./media/favicon/ms-icon-144x144.png")
+      meta(name="theme-color" content="#ffffff")
+      link(rel="icon" href="/media/favicon.ico" type="image/x-icon")
+
+      // 🔹 Structured Data (JSON-LD)
+      script(type="application/ld+json"). 
+        {
+          "@context": "https://schema.org",
+          "@type": "ApartmentComplex",
+          "name": "The Wayne",
+          "description": "Luxury apartments in Crestwood with resort-style amenities, modern interiors, and a location within the Lindbergh School District.",
+          "image": "https://thewayne.com/media/logo.png",
+          "url": "https://thewayne.com"
+        }
+
+  body(data-barba="wrapper")
+    div(class="smooth-scroll")             
+      div(class="preloader grid grid-cols-2")
+        div(class="slide")
           svg
-            line(x1='0' y1='0' x2='0' y2='100%' )    
-      div(class="slide")
+            line(x1='0' y1='0' x2='0' y2='100%')    
+        div(class="slide")
           svg
             line(x1='0' y1='0' x2='0' y2='100%')
-      include  ../../src/views/partials/header.pug
-    main(data-barba="container" data-barba-namespace=htmlWebpackPlugin.options.title)
       block content
-    include  ../../src/views/partials/footer.pug
-
+      include ../../src/views/partials/footer.pug
